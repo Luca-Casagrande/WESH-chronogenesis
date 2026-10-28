@@ -52,5 +52,8 @@ def main():
        'checks':{k:bool(v) for k,v in checks.items()},'sympy':s.__version__,
        'scope':'Embedding, Gauss sign, initial-data argument support, exact remainder and observed LR monotonicity.'}
  args.output.write_text(json.dumps(data,indent=2)+'\n')
+ if not data['passed']:
+  failed=[name for name,passed in data['checks'].items() if not passed]
+  raise SystemExit('FAIL: ' + '; '.join(failed))
  print(f"PASS: {len(checks)} refinements checks")
 if __name__=='__main__':main()

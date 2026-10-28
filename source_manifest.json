@@ -19,8 +19,8 @@
     {
       "path": "appendixEG/verify_review_refinements.py",
       "source_sha256": "9ac76e15dc2ae998e10fbcd237f3288ae6500a3f7ae0ce0b286bb3a96eaa2580",
-      "distributed_sha256": "9ac76e15dc2ae998e10fbcd237f3288ae6500a3f7ae0ce0b286bb3a96eaa2580",
-      "change": "Source unchanged."
+      "distributed_sha256": "90908a421024573a6c9fc21a8e7b0bdb6981cfe62d6aabe9b2fba8cd92812e45",
+      "change": "Mathematical checks unchanged; report aggregated failures with a nonzero exit status."
     },
     {
       "path": "appendixG/verify_wesh_appendixG.py",
