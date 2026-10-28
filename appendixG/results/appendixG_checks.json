@@ -1,0 +1,247 @@
+{
+  "environment": {
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "checks_count": 47,
+  "checks": [
+    {
+      "name": "residual derivative",
+      "passed": true
+    },
+    {
+      "name": "mixed equation residual",
+      "passed": true
+    },
+    {
+      "name": "trace damping",
+      "passed": true
+    },
+    {
+      "name": "radiation fraction exponent",
+      "passed": true
+    },
+    {
+      "name": "marginal exponent",
+      "passed": true
+    },
+    {
+      "name": "cone primitive",
+      "passed": true
+    },
+    {
+      "name": "lower-cut polynomial",
+      "passed": true
+    },
+    {
+      "name": "cutoff origin",
+      "passed": true
+    },
+    {
+      "name": "cutoff terminal zero",
+      "passed": true
+    },
+    {
+      "name": "ideal cone coefficient",
+      "passed": true
+    },
+    {
+      "name": "cut cone proper-time quadrature",
+      "passed": true,
+      "ratio": 0.0001,
+      "error": 4.440892098500626e-16
+    },
+    {
+      "name": "cut cone proper-time quadrature",
+      "passed": true,
+      "ratio": 0.04,
+      "error": 6.661338147750939e-16
+    },
+    {
+      "name": "cut cone proper-time quadrature",
+      "passed": true,
+      "ratio": 0.36,
+      "error": 4.440892098500626e-16
+    },
+    {
+      "name": "cut cone proper-time quadrature",
+      "passed": true,
+      "ratio": 0.81,
+      "error": 8.422082475867398e-15
+    },
+    {
+      "name": "future-window variance",
+      "passed": true
+    },
+    {
+      "name": "past-future covariance",
+      "passed": true
+    },
+    {
+      "name": "future orthogonality after projection",
+      "passed": true
+    },
+    {
+      "name": "full remainder variance",
+      "passed": true
+    },
+    {
+      "name": "future square quadrature",
+      "passed": true,
+      "N": 0.2,
+      "h": 0.1
+    },
+    {
+      "name": "cross rectangle quadrature",
+      "passed": true,
+      "N": 0.2,
+      "h": 0.1
+    },
+    {
+      "name": "future square quadrature",
+      "passed": true,
+      "N": 1.0,
+      "h": 0.8
+    },
+    {
+      "name": "cross rectangle quadrature",
+      "passed": true,
+      "N": 1.0,
+      "h": 0.8
+    },
+    {
+      "name": "future square quadrature",
+      "passed": true,
+      "N": 4.0,
+      "h": 2.0
+    },
+    {
+      "name": "cross rectangle quadrature",
+      "passed": true,
+      "N": 4.0,
+      "h": 2.0
+    },
+    {
+      "name": "thermal transfer",
+      "passed": true
+    },
+    {
+      "name": "duration from entropy",
+      "passed": true
+    },
+    {
+      "name": "baryon exponent elimination",
+      "passed": true
+    },
+    {
+      "name": "peak reproduction",
+      "passed": true,
+      "value": 2.939032195479
+    },
+    {
+      "name": "both power laws reconstructed",
+      "passed": true,
+      "eta10": 6.059231459551404
+    },
+    {
+      "name": "confidence boundary probability",
+      "passed": true,
+      "endpoint": 0.00011169466252352745
+    },
+    {
+      "name": "endpoint digits",
+      "passed": true
+    },
+    {
+      "name": "total typicality probability",
+      "passed": true
+    },
+    {
+      "name": "projected typicality probability",
+      "passed": true
+    },
+    {
+      "name": "LR rejection threshold reconstructed",
+      "passed": true
+    },
+    {
+      "name": "LR rejection rule",
+      "passed": true,
+      "sample": 0
+    },
+    {
+      "name": "LR rejection rule",
+      "passed": true,
+      "sample": 0.02
+    },
+    {
+      "name": "LR rejection rule",
+      "passed": true,
+      "sample": 0.058
+    },
+    {
+      "name": "LR rejection rule",
+      "passed": true,
+      "sample": 0.06
+    },
+    {
+      "name": "LR rejection rule",
+      "passed": true,
+      "sample": 0.3
+    },
+    {
+      "name": "LR rejection rule",
+      "passed": true,
+      "sample": 1.0
+    },
+    {
+      "name": "LR rejection rule",
+      "passed": true,
+      "sample": 3.0
+    },
+    {
+      "name": "LR coverage quadrature",
+      "passed": true,
+      "coverage": 0.8918802375822181
+    },
+    {
+      "name": "LR coverage digits",
+      "passed": true
+    },
+    {
+      "name": "helium derivative",
+      "passed": true
+    },
+    {
+      "name": "helium second coefficient",
+      "passed": true
+    },
+    {
+      "name": "helium linear rounding",
+      "passed": true
+    },
+    {
+      "name": "helium quadratic rounding",
+      "passed": true
+    }
+  ],
+  "numbers": {
+    "k_N": 0.17266646266829866,
+    "z_ab": -0.0035451786121970747,
+    "peak": 2.939032195479,
+    "B50": 8383.376770993642,
+    "q_005": 0.06270677794321385,
+    "Sigma95": 0.9408871247288348,
+    "s_perp95": 0.9363784392437141,
+    "sigma_endpoint": 0.00011169466252352745,
+    "sigma_typ_total": 1.8235089369281727e-05,
+    "sigma_typ_projected": 1.8258041032701224e-05,
+    "sigma_LR": 5.060010609700662e-05,
+    "coverage_LR": 0.8918802375822181,
+    "helium_linear_rms": 0.012552265343474697,
+    "helium_quadratic_at_one_sigma": -0.001639637053065764
+  },
+  "scope": "Algebra and statistics of the declared effective model only; no nuclear-network validation."
+}

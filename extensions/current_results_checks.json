@@ -1,0 +1,1220 @@
+{
+  "all_passed": true,
+  "seed": 20261028,
+  "number_of_checks": 189,
+  "checks": [
+    {
+      "name": "A: declared Fourier convention",
+      "passed": true,
+      "method": "exact symbolic"
+    },
+    {
+      "name": "A: square of temporal matrix",
+      "passed": true,
+      "method": "exact symbolic"
+    },
+    {
+      "name": "A: even-sector isometry",
+      "passed": true,
+      "method": "exact symbolic"
+    },
+    {
+      "name": "A: two-level restriction",
+      "passed": true,
+      "method": "exact symbolic"
+    },
+    {
+      "name": "A: even image",
+      "passed": true,
+      "method": "exact symbolic"
+    },
+    {
+      "name": "A: orientation reversal",
+      "passed": true,
+      "method": "exact symbolic"
+    },
+    {
+      "name": "A: complete algebra multiplication",
+      "passed": true,
+      "residual": 8.95090418262362e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "A: reduced inverse",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "A: zero-extended unit",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "A: Dirac commutation",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "A: neutral event subalgebra",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "A: bare compression",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "A: mixed-state gate isometry 0",
+      "passed": true,
+      "residual": 7.771561172376096e-16,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "A: mixed-state gate isometry 1",
+      "passed": true,
+      "residual": 4.718447854656915e-16,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "A: mixed-state gate isometry 2",
+      "passed": true,
+      "residual": 9.992007221626409e-16,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "B: compensated sector drift 0",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: quadratic-variation density 0",
+      "passed": true,
+      "residual": 6.938893903907228e-18,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: uncertainty budget generator 0",
+      "passed": true,
+      "residual": 3.469446951953614e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: compensated sector drift 1",
+      "passed": true,
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: quadratic-variation density 1",
+      "passed": true,
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: uncertainty budget generator 1",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: compensated sector drift 2",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: quadratic-variation density 2",
+      "passed": true,
+      "residual": 4.163336342344337e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: uncertainty budget generator 2",
+      "passed": true,
+      "residual": 6.938893903907228e-18,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: compensated sector drift 3",
+      "passed": true,
+      "residual": 2.7755575615628914e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: quadratic-variation density 3",
+      "passed": true,
+      "residual": 1.0408340855860843e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: uncertainty budget generator 3",
+      "passed": true,
+      "residual": 3.469446951953614e-18,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: compensated sector drift 4",
+      "passed": true,
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: quadratic-variation density 4",
+      "passed": true,
+      "residual": 2.7755575615628914e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: uncertainty budget generator 4",
+      "passed": true,
+      "residual": 2.7755575615628914e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: compensated sector drift 5",
+      "passed": true,
+      "residual": 1.942890293094024e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: quadratic-variation density 5",
+      "passed": true,
+      "residual": 2.1684043449710089e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: uncertainty budget generator 5",
+      "passed": true,
+      "residual": 6.418476861114186e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: compensated sector drift 6",
+      "passed": true,
+      "residual": 6.938893903907228e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: quadratic-variation density 6",
+      "passed": true,
+      "residual": 1.457167719820518e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: uncertainty budget generator 6",
+      "passed": true,
+      "residual": 2.0816681711721685e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: compensated sector drift 7",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: quadratic-variation density 7",
+      "passed": true,
+      "residual": 6.938893903907228e-18,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: uncertainty budget generator 7",
+      "passed": true,
+      "residual": 4.85722573273506e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: compensated sector drift 8",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: quadratic-variation density 8",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: uncertainty budget generator 8",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: compensated sector drift 9",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: quadratic-variation density 9",
+      "passed": true,
+      "residual": 1.3877787807814457e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: uncertainty budget generator 9",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: compensated sector drift 10",
+      "passed": true,
+      "residual": 2.7755575615628914e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: quadratic-variation density 10",
+      "passed": true,
+      "residual": 6.938893903907228e-18,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: uncertainty budget generator 10",
+      "passed": true,
+      "residual": 1.0408340855860843e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: compensated sector drift 11",
+      "passed": true,
+      "residual": 1.3877787807814457e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: quadratic-variation density 11",
+      "passed": true,
+      "residual": 1.491862189340054e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: uncertainty budget generator 11",
+      "passed": true,
+      "residual": 3.469446951953614e-18,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: compensated sector drift 12",
+      "passed": true,
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: quadratic-variation density 12",
+      "passed": true,
+      "residual": 2.0816681711721685e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: uncertainty budget generator 12",
+      "passed": true,
+      "residual": 6.938893903907228e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: compensated sector drift 13",
+      "passed": true,
+      "residual": 1.3877787807814457e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: quadratic-variation density 13",
+      "passed": true,
+      "residual": 1.5612511283791264e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: uncertainty budget generator 13",
+      "passed": true,
+      "residual": 1.734723475976807e-18,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: compensated sector drift 14",
+      "passed": true,
+      "residual": 1.6653345369377348e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: quadratic-variation density 14",
+      "passed": true,
+      "residual": 2.706168622523819e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: uncertainty budget generator 14",
+      "passed": true,
+      "residual": 1.0408340855860843e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: sharp-sector event invariance",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: sharp-sector event invariance",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: sharp-sector event invariance",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "B: sharp-sector event invariance",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 2.7755575615628914e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 8.326672684688674e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 5.5511151231257815e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 8.500145032286355e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 8.326672684688674e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 2.7755575615628914e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 8.326672684688674e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 1.3877787807814457e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 1.3877787807814457e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 1.3877787807814457e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 6.938893903907228e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 2.7755575615628914e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 1.3877787807814457e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 6.938893903907228e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 2.7755575615628914e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 2.7755575615628914e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 2.7755575615628914e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Stationary Bell purity loss",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Stationary Bell continuing activity",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: frozen approximation bound n=4",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: trace n=4",
+      "passed": true,
+      "residual": 4.440896863058399e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: positivity n=4",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: frozen approximation bound n=8",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: trace n=8",
+      "passed": true,
+      "residual": 4.440921876902839e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: positivity n=8",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: frozen approximation bound n=16",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: trace n=16",
+      "passed": true,
+      "residual": 1.0842021724855044e-19,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: positivity n=16",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: frozen approximation bound n=32",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: trace n=32",
+      "passed": true,
+      "residual": 1.0842021724855044e-19,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: positivity n=32",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: gate-controlled initial-data bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: averaged-product finite spectator n=4",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: averaged-product finite spectator n=8",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: averaged-product finite spectator n=16",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "C: averaged-product finite spectator n=32",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "F: parity-weight conservation q=0.0",
+      "passed": true,
+      "residual": 2.220446049250313e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "F: normalization q=0.0",
+      "passed": true,
+      "residual": 2.220446049250313e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "F: total-variation relaxation q=0.0",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "F: even imbalance q=0.0",
+      "passed": true,
+      "residual": 5.17078047046482e-12,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "F: odd imbalance q=0.0",
+      "passed": true,
+      "residual": 4.069612702384262e-12,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "F: parity-weight conservation q=0.3",
+      "passed": true,
+      "residual": 2.220446049250313e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "F: normalization q=0.3",
+      "passed": true,
+      "residual": 2.220446049250313e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "F: total-variation relaxation q=0.3",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "F: even imbalance q=0.3",
+      "passed": true,
+      "residual": 5.145577757284525e-12,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "F: odd imbalance q=0.3",
+      "passed": true,
+      "residual": 7.556344439052509e-12,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "F: parity-weight conservation q=0.8",
+      "passed": true,
+      "residual": 3.3306690738754696e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "F: normalization q=0.8",
+      "passed": true,
+      "residual": 3.3306690738754696e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "F: total-variation relaxation q=0.8",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "F: even imbalance q=0.8",
+      "passed": true,
+      "residual": 9.272174607971584e-12,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "F: odd imbalance q=0.8",
+      "passed": true,
+      "residual": 2.800276969601944e-12,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "F: parity-weight conservation q=1.0",
+      "passed": true,
+      "residual": 2.220446049250313e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "F: normalization q=1.0",
+      "passed": true,
+      "residual": 2.220446049250313e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "F: total-variation relaxation q=1.0",
+      "passed": true,
+      "residual": 7.299168214291996e-12,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "F: even imbalance q=1.0",
+      "passed": true,
+      "residual": 2.3061164089455133e-11,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "F: odd imbalance q=1.0",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "Cross-epoch fixed amplitude",
+      "passed": true,
+      "method": "exact symbolic"
+    },
+    {
+      "name": "Cross-epoch derivative",
+      "passed": true,
+      "method": "exact symbolic"
+    },
+    {
+      "name": "Rank-one inherited covariance",
+      "passed": true,
+      "method": "exact symbolic"
+    },
+    {
+      "name": "Documented BBN mean",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Documented BBN width",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Documented BBN alpha",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    }
+  ],
+  "diagnostics": {
+    "activity_purity_max_residual": 1.3877787807814457e-16,
+    "flow": {
+      "M_star": 2.38,
+      "kappa_star": 0.75,
+      "frozen": [
+        {
+          "steps": 4,
+          "error": 0.0001635730199782514,
+          "upper_bound": 0.19566427449294116
+        },
+        {
+          "steps": 8,
+          "error": 8.114938443731115e-05,
+          "upper_bound": 0.09783213724647058
+        },
+        {
+          "steps": 16,
+          "error": 4.0415843375806914e-05,
+          "upper_bound": 0.04891606862323529
+        },
+        {
+          "steps": 32,
+          "error": 2.0168264215387966e-05,
+          "upper_bound": 0.024458034311617645
+        }
+      ],
+      "averaged_products": [
+        {
+          "steps": 4,
+          "spectator_test_error": 5.980356496207014e-05,
+          "epsilon": 0.029133000000000006
+        },
+        {
+          "steps": 8,
+          "spectator_test_error": 8.6956739008773e-06,
+          "epsilon": 0.008465999999999987
+        },
+        {
+          "steps": 16,
+          "spectator_test_error": 3.4545047752695447e-06,
+          "epsilon": 0.00673200000000001
+        },
+        {
+          "steps": 32,
+          "spectator_test_error": 8.371528439084066e-07,
+          "epsilon": 0.0032640000000000342
+        }
+      ]
+    },
+    "bell_relaxation": [
+      {
+        "q": 0.0,
+        "initial_gate": 0.325,
+        "final_gate": 0.0008757971182643265,
+        "stationary_gate": 0.0,
+        "final_TV": 0.0008757971182643265,
+        "upper_TV": 0.001201805707856953
+      },
+      {
+        "q": 0.3,
+        "initial_gate": 0.3175,
+        "final_gate": 0.14999999999999986,
+        "stationary_gate": 0.15,
+        "final_TV": 0.0007664896058690446,
+        "upper_TV": 0.001174071729983331
+      },
+      {
+        "q": 0.8,
+        "initial_gate": 0.47000000000000003,
+        "final_gate": 0.3999999999999999,
+        "stationary_gate": 0.4,
+        "final_TV": 0.0009988207048962396,
+        "upper_TV": 0.0011278484335272944
+      },
+      {
+        "q": 1.0,
+        "initial_gate": 0.55,
+        "final_gate": 0.5,
+        "stationary_gate": 0.5,
+        "final_TV": 0.0011093591153487348,
+        "upper_TV": 0.0011093591149448799
+      }
+    ],
+    "BBN_endpoint": 0.00011169466252352778,
+    "continued_source_coefficient": 0.0009357310166109496
+  },
+  "scope": "Exact finite identities and selected regression cases for the current manuscript; analytic proofs remain in the manuscript."
+}

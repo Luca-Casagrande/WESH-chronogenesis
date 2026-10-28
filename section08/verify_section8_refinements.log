@@ -1,0 +1,47 @@
+PASS: 15 targeted checks
+{
+  "source": "Yeh et al., ApJ 1008, 241 (2026), Table 2, BBN+Yp+D row; DOI 10.3847/1538-4357/ae879c",
+  "input_provenance": "Documented source values; the PDF is not re-read by this script",
+  "mean": 2.941,
+  "measurement_sd": 0.092,
+  "y_obs": -0.05900000000000016,
+  "alpha": 0.05,
+  "X_per_sigma": 68.49412404988298,
+  "sqrt_F50": 19.924858845171276,
+  "rms_u_per_sigma": 1364.7357534175696,
+  "B_50": 8383.376770993642,
+  "rms_deltaN_at_1p1e_4": 0.9221714448093007,
+  "central_probability_at_1p1e_4": 0.050761744745531745,
+  "sigma_95_central": 0.00011169466252352777,
+  "central_probability_at_bound": 0.050000000000000044,
+  "sensitivity": [
+    {
+      "N_pre": 10.0,
+      "F": 77.0,
+      "B_N": 3692.062924169098,
+      "relative_limit_to_N50": 2.2706483998726346,
+      "sigma_95_versioned_BBN_only": 0.00025361930673336225
+    },
+    {
+      "N_pre": 30.0,
+      "F": 237.0,
+      "B_N": 6477.358054039465,
+      "relative_limit_to_N50": 1.2942586624133785,
+      "sigma_95_versioned_BBN_only": 0.00014456178451641475
+    },
+    {
+      "N_pre": 41.0,
+      "F": 325.0,
+      "B_N": 7585.1716301309325,
+      "relative_limit_to_N50": 1.1052323111176499,
+      "sigma_95_versioned_BBN_only": 0.00012344855000038455
+    },
+    {
+      "N_pre": 50.0,
+      "F": 397.0,
+      "B_N": 8383.376770993642,
+      "relative_limit_to_N50": 1.0,
+      "sigma_95_versioned_BBN_only": 0.00011169466252352777
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "number_of_checks": 9,
+  "checks": {
+    "constant_source_residual_solution": true,
+    "radiation_relative_exponent": true,
+    "non_growth_condition_numerator": true,
+    "trace_choice_density_power": true,
+    "trace_choice_fraction_constant": true,
+    "interior_relative_decay": true,
+    "beyond_trace_relative_growth": true,
+    "matched_material_density_at_fixed_n": true,
+    "fixed_n_expansion_fraction": true
+  },
+  "all_passed": true,
+  "scope": "Homogeneous residual and comparison identities; no global stability or empirical inference."
+}

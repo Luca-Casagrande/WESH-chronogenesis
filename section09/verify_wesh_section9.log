@@ -1,0 +1,21 @@
+{
+  "checks_passed": 69,
+  "benchmark": {
+    "B50": 8383.376770993642,
+    "q_alpha": 0.06270677794321385,
+    "sigma_95": 0.00011169466252352778,
+    "variance_bound": 1.2475697636244761e-08,
+    "rms_delta_N": 0.9363784392437169,
+    "rms_u": 0.15243369941176788,
+    "rms_speedup": 0.07621684970588394,
+    "peak_check_N_nu": 2.939032195479,
+    "peak_based_bound": 0.00011551686715350751
+  },
+  "comparisons": {
+    "LR_threshold": 2.71,
+    "LR_endpoint": 5.060010609700668e-05,
+    "LR_coverage_at_endpoint": 0.891880237582218,
+    "typicality_bound": 1.8235089369281727e-05,
+    "independent_remnant_fraction_50": 0.9974874371859297
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "exact": {
+    "rate_derivative_original": "c_y*p*(c_x + c_y)*(p - 1)*(2*p - 1)**2",
+    "rate_derivative_hadamard": "c_y**2*p*(p - 1)*(2*p - 1)**2",
+    "rate_derivative_difference": "-c_x*c_y*p*(p - 1)*(2*p - 1)**2",
+    "count_difference_s_squared_coefficient": "-c_x*c_y*p*(p - 1)*(2*p - 1)**2/2",
+    "update_data_original": [
+      {
+        "j": "p",
+        "var": "-p*(p - 1)",
+        "post_p_y": "1 - p"
+      },
+      {
+        "j": "p",
+        "var": "-p*(p - 1)",
+        "post_p_y": "1 - p"
+      }
+    ],
+    "update_data_hadamard": [
+      {
+        "j": "1/2",
+        "var": "1/4",
+        "post_p_y": "p"
+      },
+      {
+        "j": "p",
+        "var": "-p*(p - 1)",
+        "post_p_y": "1 - p"
+      }
+    ],
+    "difference_reclosed_vs_original_mixture_variance": "r*w_b**2*(q - 1)**2/2"
+  },
+  "bell_samples": [
+    {
+      "q": 0.0,
+      "gate_global": 1.1102230246251565e-16,
+      "conditional_gate_even": 0.4999999999999999,
+      "conditional_gate_odd": 0.4999999999999999,
+      "mean_bilocal_aux_rate": 1.2767564783189297e-16,
+      "amplitude_even_fixed_global_law": 0.09,
+      "amplitude_odd_fixed_global_law": 0.09,
+      "amplitude_law_average": 0.09
+    },
+    {
+      "q": 0.1,
+      "gate_global": 0.05000000000000002,
+      "conditional_gate_even": 0.4999999999999999,
+      "conditional_gate_odd": 0.4999999999999999,
+      "mean_bilocal_aux_rate": 0.051750000000000004,
+      "amplitude_even_fixed_global_law": 0.09,
+      "amplitude_odd_fixed_global_law": 0.1268,
+      "amplitude_law_average": 0.10656
+    },
+    {
+      "q": 0.25,
+      "gate_global": 0.125,
+      "conditional_gate_even": 0.4999999999999999,
+      "conditional_gate_odd": 0.4999999999999999,
+      "mean_bilocal_aux_rate": 0.10781249999999998,
+      "amplitude_even_fixed_global_law": 0.09,
+      "amplitude_odd_fixed_global_law": 0.182,
+      "amplitude_law_average": 0.1245
+    },
+    {
+      "q": 0.6,
+      "gate_global": 0.29999999999999993,
+      "conditional_gate_even": 0.4999999999999999,
+      "conditional_gate_odd": 0.4999999999999999,
+      "mean_bilocal_aux_rate": 0.13799999999999996,
+      "amplitude_even_fixed_global_law": 0.09,
+      "amplitude_odd_fixed_global_law": 0.3108,
+      "amplitude_law_average": 0.13416
+    },
+    {
+      "q": 0.99,
+      "gate_global": 0.4949999999999999,
+      "conditional_gate_even": 0.4999999999999999,
+      "conditional_gate_odd": 0.4999999999999999,
+      "mean_bilocal_aux_rate": 0.005692500000000002,
+      "amplitude_even_fixed_global_law": 0.09,
+      "amplitude_odd_fixed_global_law": 0.45432000000000006,
+      "amplitude_law_average": 0.09182159999999999
+    },
+    {
+      "q": 1.0,
+      "gate_global": 0.4999999999999999,
+      "conditional_gate_even": 0.4999999999999999,
+      "conditional_gate_odd": 0.4999999999999999,
+      "mean_bilocal_aux_rate": 0.0,
+      "amplitude_even_fixed_global_law": 0.09,
+      "amplitude_odd_fixed_global_law": 0.4580000000000001,
+      "amplitude_law_average": 0.09
+    }
+  ],
+  "max_bell_residual": 2.220446049250313e-16,
+  "constraint_commutant_sufficient_not_necessary": true,
+  "remarks": [
+    "The total conditional count-rate derivative includes both local channels.",
+    "These are algebraic checks with no Monte Carlo trajectories.",
+    "All comparisons are at fixed auxiliary exposure; no operational-signalling conclusion is asserted."
+  ]
+}

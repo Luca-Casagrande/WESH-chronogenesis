@@ -1,0 +1,20 @@
+{
+  "sum_channel_proportions": 2.220446049250313e-16,
+  "time_changed_compensators": 1.681029352066364e-16,
+  "proper_time_compensators": 1.681029352066364e-16,
+  "jacobian_identity": 1.6381542132435941e-16,
+  "kernel_normalization": 2.2204460492503126e-16,
+  "regional_identity_s_vs_t": 2.8764736719177117e-16,
+  "regional_identity_s_vs_tau": 2.8764736719177117e-16,
+  "spatial_fubini_covariance_check": 1.4382368359588558e-16,
+  "target_activity_bound_ratio": 0.12576702552404248,
+  "target_bound_saturation": 3.1486145671847337e-16,
+  "global_time_includes_bilocal": 1.6810349870555801e-16,
+  "local_proper_rate": 1.6209256159527283e-16,
+  "common_rate_cancellation": 1.9681660554274158e-16,
+  "bilocal_increment_strictly_positive": true,
+  "local_extensivity_Q": 2.313005024470182e-16,
+  "local_volume_variance": 5.655178498419544e-16,
+  "signed_unit_integral_does_not_bound_subregion": true,
+  "anticipating_window_mean_counterexample": 0.35946317129377725
+}

@@ -1,0 +1,145 @@
+{
+  "scope": "Targeted algebra, second moments, and fixed-input statistical handoff only",
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "nested_self_similar_normalized_covariance",
+      "passed": true
+    },
+    {
+      "name": "radiation_exponent_independent_of_gamma",
+      "passed": true
+    },
+    {
+      "name": "friedmann_with_mean_lambda",
+      "passed": true
+    },
+    {
+      "name": "radiation_limit_of_friedmann",
+      "passed": true
+    },
+    {
+      "name": "lambda_retained_linear_speedup",
+      "passed": true
+    },
+    {
+      "name": "variance_complement_is_boundary_projection",
+      "passed": true
+    },
+    {
+      "name": "large_N_fraction_loss",
+      "passed": true
+    },
+    {
+      "name": "large_N_normalized_F",
+      "passed": true
+    },
+    {
+      "name": "N_sensitivity_log_derivative",
+      "passed": true
+    },
+    {
+      "name": "future_remainder_variance_positive_integral",
+      "passed": true
+    },
+    {
+      "name": "entropy_duration_relation",
+      "passed": true
+    },
+    {
+      "name": "central_tail_inversion_of_versioned_BBN_only_input",
+      "passed": true
+    },
+    {
+      "name": "rounded_1p1e_4_benchmark_reproduced",
+      "passed": true
+    },
+    {
+      "name": "retained_fraction_at_50",
+      "passed": true
+    },
+    {
+      "name": "future_seven_efolds_not_boundary_remainder",
+      "passed": true
+    }
+  ],
+  "check_count": 15,
+  "boundary_fraction_N50": 0.9974874371859297,
+  "future_remainder_ratio_h7": 0.14357682619647355,
+  "BBN_handoff": {
+    "source": "Yeh et al., ApJ 1008, 241 (2026), Table 2, BBN+Yp+D row; DOI 10.3847/1538-4357/ae879c",
+    "input_provenance": "Documented source values; the PDF is not re-read by this script",
+    "mean": 2.941,
+    "measurement_sd": 0.092,
+    "y_obs": -0.05900000000000016,
+    "alpha": 0.05,
+    "X_per_sigma": 68.49412404988298,
+    "sqrt_F50": 19.924858845171276,
+    "rms_u_per_sigma": 1364.7357534175696,
+    "B_50": 8383.376770993642,
+    "rms_deltaN_at_1p1e_4": 0.9221714448093007,
+    "central_probability_at_1p1e_4": 0.050761744745531745,
+    "sigma_95_central": 0.00011169466252352777,
+    "central_probability_at_bound": 0.050000000000000044,
+    "sensitivity": [
+      {
+        "N_pre": 10.0,
+        "F": 77.0,
+        "B_N": 3692.062924169098,
+        "relative_limit_to_N50": 2.2706483998726346,
+        "sigma_95_versioned_BBN_only": 0.00025361930673336225
+      },
+      {
+        "N_pre": 30.0,
+        "F": 237.0,
+        "B_N": 6477.358054039465,
+        "relative_limit_to_N50": 1.2942586624133785,
+        "sigma_95_versioned_BBN_only": 0.00014456178451641475
+      },
+      {
+        "N_pre": 41.0,
+        "F": 325.0,
+        "B_N": 7585.1716301309325,
+        "relative_limit_to_N50": 1.1052323111176499,
+        "sigma_95_versioned_BBN_only": 0.00012344855000038455
+      },
+      {
+        "N_pre": 50.0,
+        "F": 397.0,
+        "B_N": 8383.376770993642,
+        "relative_limit_to_N50": 1.0,
+        "sigma_95_versioned_BBN_only": 0.00011169466252352777
+      }
+    ]
+  },
+  "thermal_examples": [
+    {
+      "T0_GeV_assigned": 10000000000.0,
+      "TB_GeV_assigned": 0.001,
+      "gs0_assigned": 10.75,
+      "gsB_assigned": 10.75,
+      "N_pre": 29.933606208922594
+    },
+    {
+      "T0_GeV_assigned": 10000000000.0,
+      "TB_GeV_assigned": 0.001,
+      "gs0_assigned": 106.75,
+      "gsB_assigned": 10.75,
+      "N_pre": 30.69880084143428
+    },
+    {
+      "T0_GeV_assigned": 1000000000000000.0,
+      "TB_GeV_assigned": 0.001,
+      "gs0_assigned": 10.75,
+      "gsB_assigned": 10.75,
+      "N_pre": 41.44653167389282
+    },
+    {
+      "T0_GeV_assigned": 1000000000000000.0,
+      "TB_GeV_assigned": 0.001,
+      "gs0_assigned": 106.75,
+      "gsB_assigned": 10.75,
+      "N_pre": 42.21172630640451
+    }
+  ]
+}

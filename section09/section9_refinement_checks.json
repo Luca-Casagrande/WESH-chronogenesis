@@ -1,0 +1,115 @@
+{
+  "checks_passed": 20,
+  "checks": [
+    {
+      "name": "baryon exponent cancels exactly",
+      "passed": true
+    },
+    {
+      "name": "contrast neutrino coefficient",
+      "passed": true
+    },
+    {
+      "name": "evaluated contrast",
+      "passed": true,
+      "value": -0.0035451786121970747
+    },
+    {
+      "name": "evaluated peak from both published abundances",
+      "passed": true,
+      "value": 2.939032195479
+    },
+    {
+      "name": "helium forward substitution",
+      "passed": true
+    },
+    {
+      "name": "deuterium forward substitution",
+      "passed": true
+    },
+    {
+      "name": "exact helium first derivative",
+      "passed": true
+    },
+    {
+      "name": "exact helium quadratic coefficient",
+      "passed": true
+    },
+    {
+      "name": "helium curvature negative",
+      "passed": true
+    },
+    {
+      "name": "endpoint retains published BBN only inputs",
+      "passed": true
+    },
+    {
+      "name": "source width unchanged",
+      "passed": true,
+      "value": 0.9363784392437169
+    },
+    {
+      "name": "linear helium rms from inherited width",
+      "passed": true,
+      "value": 0.012552265343474733
+    },
+    {
+      "name": "linear helium relative to measurement width",
+      "passed": true,
+      "value": 9.655588725749794
+    },
+    {
+      "name": "quadratic helium term at one inherited width",
+      "passed": true,
+      "value": -0.0016396370530657738
+    },
+    {
+      "name": "nonlinear constant-template residual sign=-1",
+      "passed": true,
+      "value": -0.0020446725118702658
+    },
+    {
+      "name": "nonlinear constant-template residual sign=1",
+      "passed": true,
+      "value": -0.0013823393801654094
+    },
+    {
+      "name": "one-sigma template points physically inside Nnu>0",
+      "passed": true
+    },
+    {
+      "name": "endpoint central probability unchanged",
+      "passed": true
+    },
+    {
+      "name": "confidence and typicality differ quantitatively",
+      "passed": true
+    },
+    {
+      "name": "BBN+CMB input not used",
+      "passed": true
+    }
+  ],
+  "source": null,
+  "numerics": {
+    "z_ab": -0.0035451786121970747,
+    "k_N": 0.17266646266829866,
+    "N_nu_central_rate": 2.939032195479,
+    "eta10_central_rate": 6.059231459551404,
+    "helium_derivative": 0.01340512,
+    "helium_half_second_derivative": -0.00187001424,
+    "sigma_upper_95": 0.00011169466252352778,
+    "inherited_width": 0.9363784392437169,
+    "helium_linear_rms": 0.012552265343474733,
+    "helium_linear_in_observational_sigmas": 9.655588725749794,
+    "helium_quadratic_at_one_width": -0.0016396370530657738,
+    "helium_exact_minus_linear_at_one_width": {
+      "-1": -0.0020446725118702658,
+      "1": -0.0013823393801654094
+    }
+  },
+  "limitations": [
+    "constant-parameter helium power law is a diagnostic, not a new network calculation",
+    "Gaussian compression and history-template validity remain model assumptions"
+  ]
+}

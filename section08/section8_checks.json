@@ -1,0 +1,281 @@
+{
+  "scope": "Section 8, fixed-background local reference law; no nuclear-network calculation",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sympy": "1.14.0"
+  },
+  "symbolic_checks": [
+    {
+      "name": "beta_5_4",
+      "passed": true
+    },
+    {
+      "name": "proper_time_cone_volume",
+      "passed": true
+    },
+    {
+      "name": "hubble_cone_volume",
+      "passed": true
+    },
+    {
+      "name": "conformal_time_cone_volume",
+      "passed": true
+    },
+    {
+      "name": "truncated_volume_polynomial",
+      "passed": true
+    },
+    {
+      "name": "truncated_volume_initial_zero",
+      "passed": true
+    },
+    {
+      "name": "truncated_volume_ideal_limit",
+      "passed": true
+    },
+    {
+      "name": "normalized_amplitude",
+      "passed": true
+    },
+    {
+      "name": "nested_cone_normalized_covariance",
+      "passed": true
+    },
+    {
+      "name": "radiation_scaling_to_exponential",
+      "passed": true
+    },
+    {
+      "name": "integrated_covariance_square",
+      "passed": true
+    },
+    {
+      "name": "boundary_projection_coefficient",
+      "passed": true
+    },
+    {
+      "name": "inherited_variance_schur_complement",
+      "passed": true
+    },
+    {
+      "name": "projection_future_orthogonality",
+      "passed": true
+    },
+    {
+      "name": "inherited_variance_derivative",
+      "passed": true
+    },
+    {
+      "name": "inherited_initial_zero",
+      "passed": true
+    },
+    {
+      "name": "inherited_small_interval",
+      "passed": true
+    },
+    {
+      "name": "inherited_large_interval_offset",
+      "passed": true
+    },
+    {
+      "name": "past_future_integrated_covariance",
+      "passed": true
+    },
+    {
+      "name": "continued_total_variance",
+      "passed": true
+    },
+    {
+      "name": "remainder_variance",
+      "passed": true
+    },
+    {
+      "name": "gaussian_driver_terminal_variance",
+      "passed": true
+    },
+    {
+      "name": "gaussian_driver_cross_variance",
+      "passed": true
+    },
+    {
+      "name": "gaussian_driver_integral_variance",
+      "passed": true
+    },
+    {
+      "name": "initial_plus_driver_integral_variance",
+      "passed": true
+    },
+    {
+      "name": "initial_plus_driver_boundary_covariance",
+      "passed": true
+    },
+    {
+      "name": "nonradiative_future_factor",
+      "passed": true
+    },
+    {
+      "name": "homogeneous_radiation_transport",
+      "passed": true
+    },
+    {
+      "name": "thermal_common_temperature_transfer",
+      "passed": true
+    },
+    {
+      "name": "standard_bbn_energy_count",
+      "passed": true
+    },
+    {
+      "name": "neutrino_fraction_at_reference",
+      "passed": true
+    },
+    {
+      "name": "linear_speedup",
+      "passed": true
+    },
+    {
+      "name": "neutrino_speedup_at_reference",
+      "passed": true
+    }
+  ],
+  "symbolic_count": 33,
+  "quadrature_checks": [
+    {
+      "N": 0.001,
+      "variance_u_over_X2": 1.5978687982944704e-05,
+      "variance_inherited_over_X2": 4.2538905259069355e-08,
+      "passed": true
+    },
+    {
+      "N": 0.01,
+      "variance_u_over_X2": 0.001578878304646419,
+      "variance_inherited_over_X2": 4.141022265705485e-05,
+      "passed": true
+    },
+    {
+      "N": 0.1,
+      "variance_u_over_X2": 0.1406400920712786,
+      "variance_inherited_over_X2": 0.03195122002533562,
+      "passed": true
+    },
+    {
+      "N": 0.5,
+      "variance_u_over_X2": 2.2706705664732256,
+      "variance_inherited_over_X2": 1.5230254940577166,
+      "passed": true
+    },
+    {
+      "N": 1.0,
+      "variance_u_over_X2": 6.036631277777468,
+      "variance_inherited_over_X2": 5.072927092927034,
+      "passed": true
+    },
+    {
+      "N": 3.0,
+      "variance_u_over_X2": 22.000012288424706,
+      "variance_inherited_over_X2": 21.00002457681166,
+      "passed": true
+    },
+    {
+      "N": 10.0,
+      "variance_u_over_X2": 77.99999999999999,
+      "variance_inherited_over_X2": 77.0,
+      "passed": true
+    },
+    {
+      "N": 30.0,
+      "variance_u_over_X2": 238.0,
+      "variance_inherited_over_X2": 237.0,
+      "passed": true
+    },
+    {
+      "N": 50.0,
+      "variance_u_over_X2": 398.0000000000001,
+      "variance_inherited_over_X2": 397.0,
+      "passed": true
+    }
+  ],
+  "positive_covariance_checks": [
+    {
+      "N": 0.01,
+      "min_covariance_eigenvalue": 4.134664943764739e-05,
+      "max_future_cross_covariance": 7.559700384256247e-19,
+      "passed": true
+    },
+    {
+      "N": 0.5,
+      "min_covariance_eigenvalue": 0.35153674555215025,
+      "max_future_cross_covariance": 2.261082212508339e-17,
+      "passed": true
+    },
+    {
+      "N": 2.0,
+      "min_covariance_eigenvalue": 0.39758062416708617,
+      "max_future_cross_covariance": 3.086063616757844e-17,
+      "passed": true
+    },
+    {
+      "N": 50.0,
+      "min_covariance_eigenvalue": 0.40380550519378516,
+      "max_future_cross_covariance": 0.0,
+      "passed": true
+    }
+  ],
+  "gaussian_reference_sampling": [
+    {
+      "N": 0.1,
+      "samples": 120000,
+      "variance": 0.03195778512846414,
+      "theoretical_variance": 0.03195122002533558,
+      "variance_z_score": 0.0503301149565138,
+      "max_abs_correlation_with_future": 0.005379583224630734,
+      "passed": true
+    },
+    {
+      "N": 1.0,
+      "samples": 120000,
+      "variance": 5.058914105138522,
+      "theoretical_variance": 5.072927092927034,
+      "variance_z_score": -0.6766217255873713,
+      "max_abs_correlation_with_future": 0.010292718475217365,
+      "passed": true
+    },
+    {
+      "N": 10.0,
+      "samples": 120000,
+      "variance": 76.85299753149853,
+      "theoretical_variance": 77.0,
+      "variance_z_score": -0.4676357641783952,
+      "max_abs_correlation_with_future": 0.0061314314588603374,
+      "passed": true
+    },
+    {
+      "N": 50.0,
+      "samples": 120000,
+      "variance": 396.92739913211255,
+      "theoretical_variance": 397.0,
+      "variance_z_score": -0.04479454413762487,
+      "max_abs_correlation_with_future": 0.002254361182672555,
+      "passed": true
+    }
+  ],
+  "bbn_normalization_handoff": [
+    {
+      "N_pre": 10.0,
+      "B_of_N": 3692.062924169097,
+      "matches_existing_rounded_factor": true
+    },
+    {
+      "N_pre": 30.0,
+      "B_of_N": 6477.358054039465,
+      "matches_existing_rounded_factor": true
+    },
+    {
+      "N_pre": 50.0,
+      "B_of_N": 8383.376770993642,
+      "matches_existing_rounded_factor": true
+    }
+  ],
+  "all_passed": true
+}

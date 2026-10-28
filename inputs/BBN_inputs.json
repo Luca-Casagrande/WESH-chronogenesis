@@ -1,0 +1,32 @@
+{
+  "observational_source": {
+    "authors": "Yeh et al.",
+    "journal": "The Astrophysical Journal",
+    "volume": 1008,
+    "article": 241,
+    "year": 2026,
+    "doi": "10.3847/1538-4357/ae879c",
+    "location": "Table 2, BBN+Y_p+D; Eqs. (1), (2), (8), (9)"
+  },
+  "data": {
+    "Y_p": 0.2458,
+    "Y_p_standard_error": 0.0013,
+    "D_H": 2.513e-05,
+    "D_H_standard_error": 2.8e-07,
+    "N_nu_mean": 2.941,
+    "N_nu_error_used_in_gaussian_compression": 0.092,
+    "N_nu_peak": 2.939,
+    "standard_N_nu": 3.0
+  },
+  "matching": {
+    "gamma": "pi/210",
+    "N_pre": 50,
+    "thermal_transfer": 1.0,
+    "initial_response": 0.0
+  },
+  "inference": {
+    "alpha": 0.05,
+    "coverage": "at least 95% within the specified Gaussian sampling model, for all independent remainder distributions",
+    "confidence_endpoint": "one cosmological history; not a typical-history tolerance"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "package_version": "1.0.0",
+  "started_utc": "2026-10-28T17:23:10.543226+00:00",
+  "completed_utc": "2026-10-28T17:23:47.543004+00:00",
+  "duration_seconds": 37.0,
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "packages": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0"
+    }
+  },
+  "script_count": 20,
+  "passed_count": 20,
+  "all_passed": true,
+  "scripts": [
+    {
+      "script": "appendixE/verify_wesh_appendixE.py",
+      "returncode": 0,
+      "seconds": 3.581,
+      "passed": true
+    },
+    {
+      "script": "appendixEG/verify_review_refinements.py",
+      "returncode": 0,
+      "seconds": 1.59,
+      "passed": true
+    },
+    {
+      "script": "appendixG/verify_wesh_appendixG.py",
+      "returncode": 0,
+      "seconds": 1.933,
+      "passed": true
+    },
+    {
+      "script": "extensions/verify_current_results.py",
+      "returncode": 0,
+      "seconds": 1.729,
+      "passed": true
+    },
+    {
+      "script": "section02/verify_lifts_and_primitives.py",
+      "returncode": 0,
+      "seconds": 1.33,
+      "passed": true
+    },
+    {
+      "script": "section02/verify_section2.py",
+      "returncode": 0,
+      "seconds": 0.969,
+      "passed": true
+    },
+    {
+      "script": "section03/verify_event_record.py",
+      "returncode": 0,
+      "seconds": 2.076,
+      "passed": true
+    },
+    {
+      "script": "section03/verify_section3.py",
+      "returncode": 0,
+      "seconds": 1.544,
+      "passed": true
+    },
+    {
+      "script": "section04/verify_matching.py",
+      "returncode": 0,
+      "seconds": 0.845,
+      "passed": true
+    },
+    {
+      "script": "section04/verify_time_change.py",
+      "returncode": 0,
+      "seconds": 0.71,
+      "passed": true
+    },
+    {
+      "script": "section05/verify_additions.py",
+      "returncode": 0,
+      "seconds": 2.247,
+      "passed": true
+    },
+    {
+      "script": "section05/verify_section5.py",
+      "returncode": 0,
+      "seconds": 1.956,
+      "passed": true
+    },
+    {
+      "script": "section06/verify_section6_refinements.py",
+      "returncode": 0,
+      "seconds": 1.311,
+      "passed": true
+    },
+    {
+      "script": "section06/verify_wesh_section6.py",
+      "returncode": 0,
+      "seconds": 4.604,
+      "passed": true
+    },
+    {
+      "script": "section07/verify_section7_refinements.py",
+      "returncode": 0,
+      "seconds": 1.402,
+      "passed": true
+    },
+    {
+      "script": "section07/verify_wesh_section7.py",
+      "returncode": 0,
+      "seconds": 2.03,
+      "passed": true
+    },
+    {
+      "script": "section08/verify_section8_refinements.py",
+      "returncode": 0,
+      "seconds": 2.284,
+      "passed": true
+    },
+    {
+      "script": "section08/verify_wesh_section8.py",
+      "returncode": 0,
+      "seconds": 1.745,
+      "passed": true
+    },
+    {
+      "script": "section09/verify_wesh_section9.py",
+      "returncode": 0,
+      "seconds": 1.659,
+      "passed": true
+    },
+    {
+      "script": "section09/verify_wesh_section9_refinement.py",
+      "returncode": 0,
+      "seconds": 1.441,
+      "passed": true
+    }
+  ],
+  "optional_published_pdf_check": "not run by this command"
+}

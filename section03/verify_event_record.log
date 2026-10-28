@@ -1,0 +1,32 @@
+{
+  "rate_derivative_original": "c_y*p*(c_x + c_y)*(p - 1)*(2*p - 1)**2",
+  "rate_derivative_hadamard": "c_y**2*p*(p - 1)*(2*p - 1)**2",
+  "rate_derivative_difference": "-c_x*c_y*p*(p - 1)*(2*p - 1)**2",
+  "count_difference_s_squared_coefficient": "-c_x*c_y*p*(p - 1)*(2*p - 1)**2/2",
+  "update_data_original": [
+    {
+      "j": "p",
+      "var": "-p*(p - 1)",
+      "post_p_y": "1 - p"
+    },
+    {
+      "j": "p",
+      "var": "-p*(p - 1)",
+      "post_p_y": "1 - p"
+    }
+  ],
+  "update_data_hadamard": [
+    {
+      "j": "1/2",
+      "var": "1/4",
+      "post_p_y": "p"
+    },
+    {
+      "j": "p",
+      "var": "-p*(p - 1)",
+      "post_p_y": "1 - p"
+    }
+  ],
+  "difference_reclosed_vs_original_mixture_variance": "r*w_b**2*(q - 1)**2/2"
+}
+Maximum Bell residual: 2.220446049250313e-16

@@ -1,0 +1,498 @@
+{
+  "source_version": "Yeh et al., Astrophysical Journal 1008, 241 (2026), DOI 10.3847/1538-4357/ae879c, published PDF p.8, Table 2, BBN+Yp+D",
+  "assumptions": [
+    "known Gaussian compressed error",
+    "jointly Gaussian inherited reference",
+    "one shared cosmological history",
+    "independent arbitrary remainder",
+    "fixed duration, geometry, thermal transport"
+  ],
+  "input": {
+    "N_hat": 2.941,
+    "s_N": 0.092,
+    "y_obs": -0.05900000000000016,
+    "gamma": 0.014959965017094254,
+    "alpha": 0.05
+  },
+  "benchmark": {
+    "B50": 8383.376770993642,
+    "q_alpha": 0.06270677794321385,
+    "sigma_95": 0.00011169466252352778,
+    "variance_bound": 1.2475697636244761e-08,
+    "rms_delta_N": 0.9363784392437169,
+    "rms_u": 0.15243369941176788,
+    "rms_speedup": 0.07621684970588394,
+    "peak_check_N_nu": 2.939032195479,
+    "peak_based_bound": 0.00011551686715350751
+  },
+  "comparisons": {
+    "LR_threshold": 2.71,
+    "LR_endpoint": 5.060010609700668e-05,
+    "LR_coverage_at_endpoint": 0.891880237582218,
+    "typicality_bound": 1.8235089369281727e-05,
+    "independent_remnant_fraction_50": 0.9974874371859297
+  },
+  "duration_sensitivity": [
+    {
+      "N_pre": 10,
+      "F": 77.0,
+      "B": 3692.062924169098,
+      "thermal_factor": 1.0,
+      "gamma": 0.014959965017094254,
+      "sigma_95": 0.00025361930673336225,
+      "ratio_to_50": 2.270648399872634
+    },
+    {
+      "N_pre": 30,
+      "F": 237.0,
+      "B": 6477.358054039465,
+      "thermal_factor": 1.0,
+      "gamma": 0.014959965017094254,
+      "sigma_95": 0.00014456178451641478,
+      "ratio_to_50": 1.2942586624133785
+    },
+    {
+      "N_pre": 41,
+      "F": 325.0,
+      "B": 7585.1716301309325,
+      "thermal_factor": 1.0,
+      "gamma": 0.014959965017094254,
+      "sigma_95": 0.00012344855000038455,
+      "ratio_to_50": 1.1052323111176496
+    },
+    {
+      "N_pre": 50,
+      "F": 397.0,
+      "B": 8383.376770993642,
+      "thermal_factor": 1.0,
+      "gamma": 0.014959965017094254,
+      "sigma_95": 0.00011169466252352778,
+      "ratio_to_50": 1.0
+    }
+  ],
+  "replicated_one_history_experiments": [
+    {
+      "sigma_true": 0.0,
+      "remainder": "zero",
+      "exclusion_fraction": 0.05025,
+      "empirical_coverage": 0.94975,
+      "experiments": 400000
+    },
+    {
+      "sigma_true": 0.0,
+      "remainder": "deterministic_shift",
+      "exclusion_fraction": 0.001355,
+      "empirical_coverage": 0.998645,
+      "experiments": 400000
+    },
+    {
+      "sigma_true": 0.0,
+      "remainder": "independent_gaussian",
+      "exclusion_fraction": 0.0110025,
+      "empirical_coverage": 0.9889975,
+      "experiments": 400000
+    },
+    {
+      "sigma_true": 0.0,
+      "remainder": "independent_two_point",
+      "exclusion_fraction": 0.0,
+      "empirical_coverage": 1.0,
+      "experiments": 400000
+    },
+    {
+      "sigma_true": 5e-05,
+      "remainder": "zero",
+      "exclusion_fraction": 0.05028,
+      "empirical_coverage": 0.94972,
+      "experiments": 400000
+    },
+    {
+      "sigma_true": 5e-05,
+      "remainder": "deterministic_shift",
+      "exclusion_fraction": 0.042755,
+      "empirical_coverage": 0.957245,
+      "experiments": 400000
+    },
+    {
+      "sigma_true": 5e-05,
+      "remainder": "independent_gaussian",
+      "exclusion_fraction": 0.0363625,
+      "empirical_coverage": 0.9636375,
+      "experiments": 400000
+    },
+    {
+      "sigma_true": 5e-05,
+      "remainder": "independent_two_point",
+      "exclusion_fraction": 0.0131625,
+      "empirical_coverage": 0.9868375,
+      "experiments": 400000
+    },
+    {
+      "sigma_true": 0.00011169466252352778,
+      "remainder": "zero",
+      "exclusion_fraction": 0.049765,
+      "empirical_coverage": 0.950235,
+      "experiments": 400000
+    },
+    {
+      "sigma_true": 0.00011169466252352778,
+      "remainder": "deterministic_shift",
+      "exclusion_fraction": 0.0482875,
+      "empirical_coverage": 0.9517125,
+      "experiments": 400000
+    },
+    {
+      "sigma_true": 0.00011169466252352778,
+      "remainder": "independent_gaussian",
+      "exclusion_fraction": 0.0461425,
+      "empirical_coverage": 0.9538575,
+      "experiments": 400000
+    },
+    {
+      "sigma_true": 0.00011169466252352778,
+      "remainder": "independent_two_point",
+      "exclusion_fraction": 0.03808,
+      "empirical_coverage": 0.96192,
+      "experiments": 400000
+    }
+  ],
+  "checks": [
+    {
+      "name": "projection residual F",
+      "passed": true
+    },
+    {
+      "name": "positive derivative F",
+      "passed": true
+    },
+    {
+      "name": "zero-duration boundary",
+      "passed": true
+    },
+    {
+      "name": "small N stable series",
+      "passed": true
+    },
+    {
+      "name": "X normalization",
+      "passed": true
+    },
+    {
+      "name": "radiation to species map",
+      "passed": true
+    },
+    {
+      "name": "speed-up variance is not species variance",
+      "passed": true
+    },
+    {
+      "name": "inversion radicand",
+      "passed": true
+    },
+    {
+      "name": "zero radicand boundary",
+      "passed": true
+    },
+    {
+      "name": "likelihood scale normalization",
+      "passed": true
+    },
+    {
+      "name": "helium template derivative",
+      "passed": true,
+      "value": 0.01340512
+    },
+    {
+      "name": "baryon cancelling contrast",
+      "passed": true
+    },
+    {
+      "name": "reported peak reproduction",
+      "passed": true,
+      "value": 2.939032195479
+    },
+    {
+      "name": "input residual",
+      "passed": true
+    },
+    {
+      "name": "correct central 95pct quantile",
+      "passed": true,
+      "value": 0.06270677794321385
+    },
+    {
+      "name": "benchmark B50",
+      "passed": true,
+      "value": 8383.376770993642
+    },
+    {
+      "name": "amplitude endpoint",
+      "passed": true,
+      "value": 0.00011169466252352778
+    },
+    {
+      "name": "envelope at endpoint",
+      "passed": true
+    },
+    {
+      "name": "envelope sigma=5e-05",
+      "passed": true,
+      "value": 0.10935038937599391
+    },
+    {
+      "name": "envelope sigma=0.0001",
+      "passed": true,
+      "value": 0.05577241640253265
+    },
+    {
+      "name": "envelope sigma=0.00011",
+      "passed": true,
+      "value": 0.05076174474553165
+    },
+    {
+      "name": "duration N=10",
+      "passed": true,
+      "value": 0.00025361930673336225
+    },
+    {
+      "name": "independent root N=10",
+      "passed": true
+    },
+    {
+      "name": "duration N=30",
+      "passed": true,
+      "value": 0.00014456178451641478
+    },
+    {
+      "name": "independent root N=30",
+      "passed": true
+    },
+    {
+      "name": "duration N=41",
+      "passed": true,
+      "value": 0.00012344855000038455
+    },
+    {
+      "name": "independent root N=41",
+      "passed": true
+    },
+    {
+      "name": "duration N=50",
+      "passed": true,
+      "value": 0.00011169466252352778
+    },
+    {
+      "name": "independent root N=50",
+      "passed": true
+    },
+    {
+      "name": "thermal scaling 0.5",
+      "passed": true
+    },
+    {
+      "name": "thermal scaling 0.8",
+      "passed": true
+    },
+    {
+      "name": "thermal scaling 1",
+      "passed": true
+    },
+    {
+      "name": "thermal scaling 1.2",
+      "passed": true
+    },
+    {
+      "name": "thermal scaling 2",
+      "passed": true
+    },
+    {
+      "name": "geometrical prefactor 0.5",
+      "passed": true
+    },
+    {
+      "name": "geometrical prefactor 1",
+      "passed": true
+    },
+    {
+      "name": "geometrical prefactor 2",
+      "passed": true
+    },
+    {
+      "name": "geometrical prefactor 4",
+      "passed": true
+    },
+    {
+      "name": "peak input sensitivity",
+      "passed": true,
+      "value": 0.00011551686715350751
+    },
+    {
+      "name": "threshold rms species",
+      "passed": true,
+      "value": 0.9363784392437169
+    },
+    {
+      "name": "threshold rms radiation",
+      "passed": true,
+      "value": 0.15243369941176788
+    },
+    {
+      "name": "threshold rms speedup",
+      "passed": true,
+      "value": 0.07621684970588394
+    },
+    {
+      "name": "weight-region bound",
+      "passed": true,
+      "value": 1.2475697636244761e-08
+    },
+    {
+      "name": "empty-set case",
+      "passed": true
+    },
+    {
+      "name": "positive-set case",
+      "passed": true
+    },
+    {
+      "name": "Anderson 1d quadrature scale=0.092",
+      "passed": true,
+      "max_probability": 0.05000000000000005
+    },
+    {
+      "name": "Anderson 1d quadrature scale=0.4",
+      "passed": true,
+      "max_probability": 0.05000000000000006
+    },
+    {
+      "name": "Anderson 1d quadrature scale=0.94",
+      "passed": true,
+      "max_probability": 0.05000000000000006
+    },
+    {
+      "name": "Anderson 1d quadrature scale=2.0",
+      "passed": true,
+      "max_probability": 0.05000000000000006
+    },
+    {
+      "name": "exact zero-remainder coverage alpha=0.01",
+      "passed": true
+    },
+    {
+      "name": "exact zero-remainder coverage alpha=0.05",
+      "passed": true
+    },
+    {
+      "name": "exact zero-remainder coverage alpha=0.1",
+      "passed": true
+    },
+    {
+      "name": "exact zero-remainder coverage alpha=0.2",
+      "passed": true
+    },
+    {
+      "name": "LR apparent endpoint",
+      "passed": true,
+      "value": 5.060010609700668e-05
+    },
+    {
+      "name": "LR actual coverage",
+      "passed": true,
+      "value": 0.891880237582218
+    },
+    {
+      "name": "95pct-typicality is distinct",
+      "passed": true,
+      "value": 1.8235089369281727e-05
+    },
+    {
+      "name": "monte carlo coverage sigma=0.0 Z=zero",
+      "passed": true,
+      "exclusion_rate": 0.05025,
+      "experiments": 400000
+    },
+    {
+      "name": "monte carlo coverage sigma=0.0 Z=deterministic_shift",
+      "passed": true,
+      "exclusion_rate": 0.001355,
+      "experiments": 400000
+    },
+    {
+      "name": "monte carlo coverage sigma=0.0 Z=independent_gaussian",
+      "passed": true,
+      "exclusion_rate": 0.0110025,
+      "experiments": 400000
+    },
+    {
+      "name": "monte carlo coverage sigma=0.0 Z=independent_two_point",
+      "passed": true,
+      "exclusion_rate": 0.0,
+      "experiments": 400000
+    },
+    {
+      "name": "monte carlo coverage sigma=5e-05 Z=zero",
+      "passed": true,
+      "exclusion_rate": 0.05028,
+      "experiments": 400000
+    },
+    {
+      "name": "monte carlo coverage sigma=5e-05 Z=deterministic_shift",
+      "passed": true,
+      "exclusion_rate": 0.042755,
+      "experiments": 400000
+    },
+    {
+      "name": "monte carlo coverage sigma=5e-05 Z=independent_gaussian",
+      "passed": true,
+      "exclusion_rate": 0.0363625,
+      "experiments": 400000
+    },
+    {
+      "name": "monte carlo coverage sigma=5e-05 Z=independent_two_point",
+      "passed": true,
+      "exclusion_rate": 0.0131625,
+      "experiments": 400000
+    },
+    {
+      "name": "monte carlo coverage sigma=0.00011169466252352778 Z=zero",
+      "passed": true,
+      "exclusion_rate": 0.049765,
+      "experiments": 400000
+    },
+    {
+      "name": "monte carlo coverage sigma=0.00011169466252352778 Z=deterministic_shift",
+      "passed": true,
+      "exclusion_rate": 0.0482875,
+      "experiments": 400000
+    },
+    {
+      "name": "monte carlo coverage sigma=0.00011169466252352778 Z=independent_gaussian",
+      "passed": true,
+      "exclusion_rate": 0.0461425,
+      "experiments": 400000
+    },
+    {
+      "name": "monte carlo coverage sigma=0.00011169466252352778 Z=independent_two_point",
+      "passed": true,
+      "exclusion_rate": 0.03808,
+      "experiments": 400000
+    },
+    {
+      "name": "independence assumption is necessary",
+      "passed": true
+    }
+  ],
+  "number_of_checks": 69,
+  "versions": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sympy": "1.14.0"
+  },
+  "not_computed": [
+    "nuclear-network integration",
+    "validation of published likelihood compression",
+    "CMB likelihood",
+    "microscopic-to-Gaussian limit theorem"
+  ]
+}

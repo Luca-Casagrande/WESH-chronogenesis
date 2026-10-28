@@ -1,0 +1,17 @@
+{
+  "scope": "homogeneous compensating-stress identities and potential notation",
+  "sympy_version": "1.14.0",
+  "groups": 9,
+  "passed": 9,
+  "checks": {
+    "C00_equals_U_minus_zeta": true,
+    "Cij_equals_D_gij_over_three": true,
+    "homogeneous_compensating_tensor_traceless": true,
+    "homogeneous_compensating_tensor_exchange": true,
+    "de_sitter_trace_filter_implies_exchange": true,
+    "radiative_free_solution": true,
+    "difference_of_homogeneous_transfer_functions": true,
+    "MB_continuity_dictionary": true,
+    "MB_Euler_dictionary": true
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "all_checks_passed": true,
+  "exact_symbolic_checks": 94,
+  "finite_lift_residuals": {
+    "constraint_isometry": 0.0,
+    "physical_support": 0.0,
+    "constraint_commutator": 0.0,
+    "neutral_charge_commutator": 0.0,
+    "invariant_two_state_subspace": 5.608077198044061e-16,
+    "two_state_J": 6.836340650691034e-16
+  },
+  "randomized_direct_checks": 200,
+  "maximum_stationarity_residual": 0.0,
+  "maximum_amplitude_residual": 1.7763568394002505e-15,
+  "scope": "Algebraic verification of the stated finite model. Product-law spatial sampling is an explicitly declared sufficient effective assignment. No empirical or cosmological data are used."
+}
+{
+  "all_checks_passed": true,
+  "additional_exact_checks": 16,
+  "checks": [
+    "Ensemble weighted rate = n_b Q_blk",
+    "Conditional regional variance at fixed parities",
+    "Exact finite-array four-volume identity",
+    "q=1 local response floor",
+    "q=1 law has two equiprobable even Bell states",
+    "q=1 barycenter is a mixed separable state",
+    "q=1 barycentric purity",
+    "q=1 full-law stationarity",
+    "q=1 mean chronogenetic activity",
+    "Finite parity mixture: 1 block(s)",
+    "Finite parity mixture: 2 block(s)",
+    "Finite parity mixture: 3 block(s)",
+    "Finite parity mixture: 4 block(s)",
+    "Finite parity mixture: 5 block(s)",
+    "Finite parity mixture: 6 block(s)",
+    "Mean relation must not be asserted for each parity realization"
+  ],
+  "base_exact_checks": 94,
+  "scope": "Finite algebra and declared deterministic-volume, full-collection matching; no empirical data or Gaussian approximation."
+}

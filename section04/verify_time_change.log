@@ -1,0 +1,36 @@
+{
+  "generalized_inverse_and_terminal_compensator_max_error": 8.881784197001252e-16,
+  "flat_interval_levels_tested": [
+    0.0,
+    1.0,
+    2.0
+  ],
+  "finite_lifetime": 4.0,
+  "proportions_as_densities_with_plateaux": "passed",
+  "stopped_first_event_terminal_convention": [
+    {
+      "t": 0.1,
+      "E_N": 0.09516258196404043,
+      "E_A": 0.09516258196404043,
+      "E_M": 0.0
+    },
+    {
+      "t": 0.5,
+      "E_N": 0.3934693402873666,
+      "E_A": 0.3934693402873666,
+      "E_M": 0.0
+    },
+    {
+      "t": 1.0,
+      "E_N": 0.6321205588285577,
+      "E_A": 0.6321205588285577,
+      "E_M": 0.0
+    },
+    {
+      "t": 3.0,
+      "E_N": 0.950212931632136,
+      "E_A": 0.950212931632136,
+      "E_M": 0.0
+    }
+  ]
+}

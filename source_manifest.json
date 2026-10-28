@@ -1,0 +1,134 @@
+{
+  "package_version": "1.0.0",
+  "input_archive": {
+    "name": "WESH_Online_Resource_1.zip",
+    "sha256": "fc166cd3824317523b313473f86a86edda66c047c5e9ee26d6edc9001c26c071"
+  },
+  "manuscript_alignment": {
+    "source_name": "main (32).tex",
+    "sha256": "930f000d2fb31edc58b85d016cd0d79cd52551fd2567596accfd8200dacbfc62",
+    "method": "Stable equation/proposition labels; no manuscript source redistributed."
+  },
+  "scripts": [
+    {
+      "path": "appendixE/verify_wesh_appendixE.py",
+      "source_sha256": "1b4efde12b17cc7a2b28f44cd57c8cbe5c8e3fb2813b984e2b89a71a8951a472",
+      "distributed_sha256": "1b4efde12b17cc7a2b28f44cd57c8cbe5c8e3fb2813b984e2b89a71a8951a472",
+      "change": "Source unchanged."
+    },
+    {
+      "path": "appendixEG/verify_review_refinements.py",
+      "source_sha256": "9ac76e15dc2ae998e10fbcd237f3288ae6500a3f7ae0ce0b286bb3a96eaa2580",
+      "distributed_sha256": "9ac76e15dc2ae998e10fbcd237f3288ae6500a3f7ae0ce0b286bb3a96eaa2580",
+      "change": "Source unchanged."
+    },
+    {
+      "path": "appendixG/verify_wesh_appendixG.py",
+      "source_sha256": "951cd8da72ce79f912a21844ecb11948e0bc044c6cf1305caba642ab734dd059",
+      "distributed_sha256": "951cd8da72ce79f912a21844ecb11948e0bc044c6cf1305caba642ab734dd059",
+      "change": "Source unchanged."
+    },
+    {
+      "path": "extensions/verify_current_results.py",
+      "source_sha256": null,
+      "distributed_sha256": "9df30faa428c1352df7872360fc312213327de74914810abfad1bda886e03e43",
+      "change": "Added regression checks of results already in the aligned manuscript."
+    },
+    {
+      "path": "section02/verify_lifts_and_primitives.py",
+      "source_sha256": "aebfd7ee4787b2247beaaeb784fc9ed912a876eb34d998ac2af62f66b1b9848f",
+      "distributed_sha256": "a98410fe8c792f03d3c05210d4c3620fd6bde73e5b94c9155f31248092de548e",
+      "change": "Documentation/provenance cleanup; mathematical checks retained."
+    },
+    {
+      "path": "section02/verify_section2.py",
+      "source_sha256": "ce3d6fb48f182de766387adad6d41abf7fc9d68bbb0ed9633f7139aa287abc78",
+      "distributed_sha256": "ce3d6fb48f182de766387adad6d41abf7fc9d68bbb0ed9633f7139aa287abc78",
+      "change": "Source unchanged."
+    },
+    {
+      "path": "section03/verify_event_record.py",
+      "source_sha256": "61f0379a507f64322fccb102766cad9f9887f27f61af0f7aa0544fffd3ffb6b0",
+      "distributed_sha256": "c1e344df04d87e72431509f5ed63dd80bc965095641800239f7244a1e74a71b3",
+      "change": "Documentation/provenance cleanup; mathematical checks retained."
+    },
+    {
+      "path": "section03/verify_section3.py",
+      "source_sha256": "4bfedd292f96ff3ef8cdaf44f90892f9937d8458831db452997cbba1b9487faa",
+      "distributed_sha256": "4bfedd292f96ff3ef8cdaf44f90892f9937d8458831db452997cbba1b9487faa",
+      "change": "Source unchanged."
+    },
+    {
+      "path": "section04/verify_matching.py",
+      "source_sha256": "862b200744d6705770b58dee8b1e88cf94a2d2e8995271f0db95a65a13e11e9c",
+      "distributed_sha256": "d578fd2f7a6c89fa708efc6ff41a759f8124d49af01da7f2ab27c74fe89b0744",
+      "change": "Documentation/provenance cleanup; mathematical checks retained."
+    },
+    {
+      "path": "section04/verify_time_change.py",
+      "source_sha256": "709671be6143b451771223ad397164179bd3f4661c25ca59573d8b2c780f6ac6",
+      "distributed_sha256": "3c7df65fbd0b64be67ef77f34df89c8148d38125cb9d31b1a6bb206d4e4c0c51",
+      "change": "Documentation/provenance cleanup; mathematical checks retained."
+    },
+    {
+      "path": "section05/verify_additions.py",
+      "source_sha256": "cb07b4c9c5cdd9740af628583a30e0e95ec80e4ddfa451c4355c4aac30e53fb9",
+      "distributed_sha256": "cb07b4c9c5cdd9740af628583a30e0e95ec80e4ddfa451c4355c4aac30e53fb9",
+      "change": "Source unchanged."
+    },
+    {
+      "path": "section05/verify_section5.py",
+      "source_sha256": "1514f49372793cad542c1d7849d6708c7c9ecee5521757f167480b3f9b4b91c9",
+      "distributed_sha256": "1514f49372793cad542c1d7849d6708c7c9ecee5521757f167480b3f9b4b91c9",
+      "change": "Source unchanged."
+    },
+    {
+      "path": "section06/verify_section6_refinements.py",
+      "source_sha256": "3c7d6d8ce0282c2e8d0bb476bd13235ff533cd19e2611e2d0e9ab37e6cb0b758",
+      "distributed_sha256": "3c7d6d8ce0282c2e8d0bb476bd13235ff533cd19e2611e2d0e9ab37e6cb0b758",
+      "change": "Source unchanged."
+    },
+    {
+      "path": "section06/verify_wesh_section6.py",
+      "source_sha256": "708f56cc0a4b8bf291581beb211226f49333027534ded0afa5ff85c6d4244543",
+      "distributed_sha256": "708f56cc0a4b8bf291581beb211226f49333027534ded0afa5ff85c6d4244543",
+      "change": "Source unchanged."
+    },
+    {
+      "path": "section07/verify_section7_refinements.py",
+      "source_sha256": "82b03e315c7386fa0b7e62d977d3eea6122d0c2e89a6cb3be79692064e54fdbf",
+      "distributed_sha256": "82b03e315c7386fa0b7e62d977d3eea6122d0c2e89a6cb3be79692064e54fdbf",
+      "change": "Source unchanged."
+    },
+    {
+      "path": "section07/verify_wesh_section7.py",
+      "source_sha256": "d1ab6d6b58950541359a282d69c6933825fd3d9c10a9d8aa0d5bab7b90b701e3",
+      "distributed_sha256": "d1ab6d6b58950541359a282d69c6933825fd3d9c10a9d8aa0d5bab7b90b701e3",
+      "change": "Source unchanged."
+    },
+    {
+      "path": "section08/verify_section8_refinements.py",
+      "source_sha256": "6985e96a6b1441363be4ab95cf8652e719faa5bbefaa1907b800932864822c57",
+      "distributed_sha256": "2e7aff535376ad8cc60bd08205ea5c83a3ee98e9d739be8a6a4eefdcade4c4de",
+      "change": "Documentation/provenance cleanup; mathematical checks retained."
+    },
+    {
+      "path": "section08/verify_wesh_section8.py",
+      "source_sha256": "2bd96bafda24f139e7469558bfa1efc64cefe83a6caeacba34367b128f8d6d7d",
+      "distributed_sha256": "2bd96bafda24f139e7469558bfa1efc64cefe83a6caeacba34367b128f8d6d7d",
+      "change": "Source unchanged."
+    },
+    {
+      "path": "section09/verify_wesh_section9.py",
+      "source_sha256": "54e77ede2e9128ff84844218df7ceea8649a740ce0471745f92b9febc00e5ae9",
+      "distributed_sha256": "54e77ede2e9128ff84844218df7ceea8649a740ce0471745f92b9febc00e5ae9",
+      "change": "Source unchanged."
+    },
+    {
+      "path": "section09/verify_wesh_section9_refinement.py",
+      "source_sha256": "92c579715e8ec10845105475508329a03e28cc2e3835c93fd7ba3e98c97fe837",
+      "distributed_sha256": "92c579715e8ec10845105475508329a03e28cc2e3835c93fd7ba3e98c97fe837",
+      "change": "Source unchanged."
+    }
+  ]
+}

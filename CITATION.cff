@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite the WESH manuscript and the particular archived release used for reproduction."
+type: software
+title: "WESH chronogenesis: reproducibility supplement"
+version: 1.0.0
+authors:
+  - family-names: Casagrande
+    given-names: Luca
+    orcid: "https://orcid.org/0009-0007-6645-2316"
+abstract: >-
+  Executable finite-model, geometric and statistical checks for
+  A dissipative time-field completion of Wheeler-DeWitt dynamics:
+  chronogenesis and a conserved cosmological response.
+keywords:
+  - Wheeler-DeWitt
+  - chronogenesis
+  - stochastic dynamics
+  - primordial nucleosynthesis

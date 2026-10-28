@@ -1,0 +1,2 @@
+# Only for --published-pdf in section09/verify_wesh_section9_refinement.py.
+PyMuPDF>=1.23

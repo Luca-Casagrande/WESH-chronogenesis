@@ -1,0 +1,5 @@
+{
+  "status": "PASS_ALGEBRAIC_CHECKS",
+  "maximum_checked_residual": 1.1418534512577734e-13,
+  "scope": "Finite algebra only; no continuum or empirical validation."
+}

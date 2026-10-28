@@ -1,0 +1,20 @@
+{
+  "checks_passed": 20,
+  "numerics": {
+    "z_ab": -0.0035451786121970747,
+    "k_N": 0.17266646266829866,
+    "N_nu_central_rate": 2.939032195479,
+    "eta10_central_rate": 6.059231459551404,
+    "helium_derivative": 0.01340512,
+    "helium_half_second_derivative": -0.00187001424,
+    "sigma_upper_95": 0.00011169466252352778,
+    "inherited_width": 0.9363784392437169,
+    "helium_linear_rms": 0.012552265343474733,
+    "helium_linear_in_observational_sigmas": 9.655588725749794,
+    "helium_quadratic_at_one_width": -0.0016396370530657738,
+    "helium_exact_minus_linear_at_one_width": {
+      "-1": -0.0020446725118702658,
+      "1": -0.0013823393801654094
+    }
+  }
+}
