@@ -1,6 +1,6 @@
 {
   "passed": 47,
-  "output": "results/appendixG_checks.json",
+  "output": "results\\appendixG_checks.json",
   "numbers": {
     "k_N": 0.17266646266829866,
     "z_ab": -0.0035451786121970747,

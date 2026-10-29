@@ -1,14 +1,14 @@
 {
-  "package_version": "1.0.0",
-  "started_utc": "2026-10-28T17:23:10.543226+00:00",
-  "completed_utc": "2026-10-28T17:23:47.543004+00:00",
-  "duration_seconds": 37.0,
+  "package_version": "1.0.1",
+  "started_utc": "2026-10-29T11:38:53.209187+00:00",
+  "completed_utc": "2026-10-29T11:39:24.533432+00:00",
+  "duration_seconds": 31.313,
   "environment": {
-    "python": "3.13.5",
-    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
     "packages": {
-      "numpy": "2.3.5",
-      "scipy": "1.17.0",
+      "numpy": "2.4.6",
+      "scipy": "1.18.0",
       "sympy": "1.14.0",
       "mpmath": "1.3.0"
     }
@@ -20,121 +20,121 @@
     {
       "script": "appendixE/verify_wesh_appendixE.py",
       "returncode": 0,
-      "seconds": 3.581,
+      "seconds": 2.469,
       "passed": true
     },
     {
       "script": "appendixEG/verify_review_refinements.py",
       "returncode": 0,
-      "seconds": 1.59,
+      "seconds": 0.75,
       "passed": true
     },
     {
       "script": "appendixG/verify_wesh_appendixG.py",
       "returncode": 0,
-      "seconds": 1.933,
+      "seconds": 2.875,
       "passed": true
     },
     {
       "script": "extensions/verify_current_results.py",
       "returncode": 0,
-      "seconds": 1.729,
+      "seconds": 1.891,
       "passed": true
     },
     {
       "script": "section02/verify_lifts_and_primitives.py",
       "returncode": 0,
-      "seconds": 1.33,
+      "seconds": 0.656,
       "passed": true
     },
     {
       "script": "section02/verify_section2.py",
       "returncode": 0,
-      "seconds": 0.969,
+      "seconds": 0.281,
       "passed": true
     },
     {
       "script": "section03/verify_event_record.py",
       "returncode": 0,
-      "seconds": 2.076,
+      "seconds": 0.985,
       "passed": true
     },
     {
       "script": "section03/verify_section3.py",
       "returncode": 0,
-      "seconds": 1.544,
+      "seconds": 1.563,
       "passed": true
     },
     {
       "script": "section04/verify_matching.py",
       "returncode": 0,
-      "seconds": 0.845,
+      "seconds": 0.266,
       "passed": true
     },
     {
       "script": "section04/verify_time_change.py",
       "returncode": 0,
-      "seconds": 0.71,
+      "seconds": 0.203,
       "passed": true
     },
     {
       "script": "section05/verify_additions.py",
       "returncode": 0,
-      "seconds": 2.247,
+      "seconds": 1.515,
       "passed": true
     },
     {
       "script": "section05/verify_section5.py",
       "returncode": 0,
-      "seconds": 1.956,
+      "seconds": 1.11,
       "passed": true
     },
     {
       "script": "section06/verify_section6_refinements.py",
       "returncode": 0,
-      "seconds": 1.311,
+      "seconds": 0.594,
       "passed": true
     },
     {
       "script": "section06/verify_wesh_section6.py",
       "returncode": 0,
-      "seconds": 4.604,
+      "seconds": 3.984,
       "passed": true
     },
     {
       "script": "section07/verify_section7_refinements.py",
       "returncode": 0,
-      "seconds": 1.402,
+      "seconds": 0.781,
       "passed": true
     },
     {
       "script": "section07/verify_wesh_section7.py",
       "returncode": 0,
-      "seconds": 2.03,
+      "seconds": 2.235,
       "passed": true
     },
     {
       "script": "section08/verify_section8_refinements.py",
       "returncode": 0,
-      "seconds": 2.284,
+      "seconds": 2.782,
       "passed": true
     },
     {
       "script": "section08/verify_wesh_section8.py",
       "returncode": 0,
-      "seconds": 1.745,
+      "seconds": 2.0,
       "passed": true
     },
     {
       "script": "section09/verify_wesh_section9.py",
       "returncode": 0,
-      "seconds": 1.659,
+      "seconds": 1.875,
       "passed": true
     },
     {
       "script": "section09/verify_wesh_section9_refinement.py",
       "returncode": 0,
-      "seconds": 1.441,
+      "seconds": 1.609,
       "passed": true
     }
   ],

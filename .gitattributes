@@ -1,0 +1,7 @@
+# Keep delivered text bytes consistent across Git checkouts and release archives.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.pdf binary
+*.zip binary

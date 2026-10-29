@@ -1,5 +1,5 @@
 {
-  "checks_passed": 69,
+  "checks_passed": 68,
   "benchmark": {
     "B50": 8383.376770993642,
     "q_alpha": 0.06270677794321385,

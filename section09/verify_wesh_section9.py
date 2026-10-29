@@ -171,9 +171,7 @@ def main() -> None:
             check(f'monte carlo coverage sigma={truth} Z={name}',empirical<=.05+tol,exclusion_rate=empirical,experiments=size)
             experiments.append({'sigma_true':truth,'remainder':name,'exclusion_fraction':empirical,'empirical_coverage':1-empirical,'experiments':size})
 
-    # Correlated remainders can invalidate the inequality: check the necessity of independence.
-    anti=rng.normal(0,1,100_000)
-    check('independence assumption is necessary',np.mean(np.abs(anti-anti)<q)>.99)
+    # Without independence, Z=-G gives G+Z=0 identically; no sampling is needed.
 
     parser=argparse.ArgumentParser()
     parser.add_argument('--output-dir',type=Path,default=Path(__file__).resolve().parent)

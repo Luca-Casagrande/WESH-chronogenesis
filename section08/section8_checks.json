@@ -1,8 +1,8 @@
 {
   "scope": "Section 8, fixed-background local reference law; no nuclear-network calculation",
   "versions": {
-    "numpy": "2.3.5",
-    "scipy": "1.17.0",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
     "sympy": "1.14.0"
   },
   "symbolic_checks": [
@@ -144,30 +144,30 @@
     {
       "N": 0.001,
       "variance_u_over_X2": 1.5978687982944704e-05,
-      "variance_inherited_over_X2": 4.2538905259069355e-08,
+      "variance_inherited_over_X2": 4.253890525906936e-08,
       "passed": true
     },
     {
       "N": 0.01,
-      "variance_u_over_X2": 0.001578878304646419,
+      "variance_u_over_X2": 0.0015788783046464191,
       "variance_inherited_over_X2": 4.141022265705485e-05,
       "passed": true
     },
     {
       "N": 0.1,
-      "variance_u_over_X2": 0.1406400920712786,
+      "variance_u_over_X2": 0.14064009207127862,
       "variance_inherited_over_X2": 0.03195122002533562,
       "passed": true
     },
     {
       "N": 0.5,
-      "variance_u_over_X2": 2.2706705664732256,
+      "variance_u_over_X2": 2.270670566473225,
       "variance_inherited_over_X2": 1.5230254940577166,
       "passed": true
     },
     {
       "N": 1.0,
-      "variance_u_over_X2": 6.036631277777468,
+      "variance_u_over_X2": 6.0366312777774676,
       "variance_inherited_over_X2": 5.072927092927034,
       "passed": true
     },
@@ -179,13 +179,13 @@
     },
     {
       "N": 10.0,
-      "variance_u_over_X2": 77.99999999999999,
+      "variance_u_over_X2": 78.0,
       "variance_inherited_over_X2": 77.0,
       "passed": true
     },
     {
       "N": 30.0,
-      "variance_u_over_X2": 238.0,
+      "variance_u_over_X2": 238.00000000000003,
       "variance_inherited_over_X2": 237.0,
       "passed": true
     },
@@ -199,25 +199,25 @@
   "positive_covariance_checks": [
     {
       "N": 0.01,
-      "min_covariance_eigenvalue": 4.134664943764739e-05,
-      "max_future_cross_covariance": 7.559700384256247e-19,
+      "min_covariance_eigenvalue": 4.134664943763286e-05,
+      "max_future_cross_covariance": 1.1738090652216046e-18,
       "passed": true
     },
     {
       "N": 0.5,
-      "min_covariance_eigenvalue": 0.35153674555215025,
-      "max_future_cross_covariance": 2.261082212508339e-17,
+      "min_covariance_eigenvalue": 0.35153674555214987,
+      "max_future_cross_covariance": 7.585587375737949e-18,
       "passed": true
     },
     {
       "N": 2.0,
-      "min_covariance_eigenvalue": 0.39758062416708617,
-      "max_future_cross_covariance": 3.086063616757844e-17,
+      "min_covariance_eigenvalue": 0.3975806241670857,
+      "max_future_cross_covariance": 3.0823392334238575e-17,
       "passed": true
     },
     {
       "N": 50.0,
-      "min_covariance_eigenvalue": 0.40380550519378516,
+      "min_covariance_eigenvalue": 0.4038055051937847,
       "max_future_cross_covariance": 0.0,
       "passed": true
     }
@@ -227,9 +227,9 @@
       "N": 0.1,
       "samples": 120000,
       "variance": 0.03195778512846414,
-      "theoretical_variance": 0.03195122002533558,
-      "variance_z_score": 0.0503301149565138,
-      "max_abs_correlation_with_future": 0.005379583224630734,
+      "theoretical_variance": 0.03195122002533572,
+      "variance_z_score": 0.0503301149554804,
+      "max_abs_correlation_with_future": 0.005379583224630727,
       "passed": true
     },
     {
@@ -238,7 +238,7 @@
       "variance": 5.058914105138522,
       "theoretical_variance": 5.072927092927034,
       "variance_z_score": -0.6766217255873713,
-      "max_abs_correlation_with_future": 0.010292718475217365,
+      "max_abs_correlation_with_future": 0.010292718475217358,
       "passed": true
     },
     {
@@ -247,7 +247,7 @@
       "variance": 76.85299753149853,
       "theoretical_variance": 77.0,
       "variance_z_score": -0.4676357641783952,
-      "max_abs_correlation_with_future": 0.0061314314588603374,
+      "max_abs_correlation_with_future": 0.006131431458860351,
       "passed": true
     },
     {
@@ -256,7 +256,7 @@
       "variance": 396.92739913211255,
       "theoretical_variance": 397.0,
       "variance_z_score": -0.04479454413762487,
-      "max_abs_correlation_with_future": 0.002254361182672555,
+      "max_abs_correlation_with_future": 0.0022543611826725462,
       "passed": true
     }
   ],

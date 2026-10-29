@@ -5,7 +5,7 @@ This verifies the declared finite realization and the explicitly added
 product-law spatial sampling construction. It is not an empirical test,
 not a derivation of the effective matching, and not a cosmological simulation.
 
-Dependencies: numpy, sympy. Run: python audit/verify_section5.py
+Dependencies: numpy, sympy. Run: python section05/verify_section5.py
 """
 from __future__ import annotations
 import json

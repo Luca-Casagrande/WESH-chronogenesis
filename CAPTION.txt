@@ -2,4 +2,4 @@ Online Resource 1. Reproducibility supplement for "A dissipative time-field
 completion of Wheeler-DeWitt dynamics: chronogenesis and a conserved cosmological
 response", Luca Casagrande. Twenty Python verification programs, documented BBN
 inputs, symbolic and numerical outputs, environment information and a
-manuscript-to-code map. Package version 1.0.0.
+manuscript-to-code map. Package version 1.0.1.

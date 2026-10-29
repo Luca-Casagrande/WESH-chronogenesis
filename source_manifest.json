@@ -1,5 +1,5 @@
 {
-  "package_version": "1.0.0",
+  "package_version": "1.0.1",
   "input_archive": {
     "name": "WESH_Online_Resource_1.zip",
     "sha256": "fc166cd3824317523b313473f86a86edda66c047c5e9ee26d6edc9001c26c071"
@@ -79,8 +79,8 @@
     {
       "path": "section05/verify_section5.py",
       "source_sha256": "1514f49372793cad542c1d7849d6708c7c9ecee5521757f167480b3f9b4b91c9",
-      "distributed_sha256": "1514f49372793cad542c1d7849d6708c7c9ecee5521757f167480b3f9b4b91c9",
-      "change": "Source unchanged."
+      "distributed_sha256": "f405ab88c863d729bbd050fe6b0e85aecff83db6c9fb2724fa2a322298537de2",
+      "change": "Correct the documented run path; mathematical checks unchanged."
     },
     {
       "path": "section06/verify_section6_refinements.py",
@@ -121,8 +121,8 @@
     {
       "path": "section09/verify_wesh_section9.py",
       "source_sha256": "54e77ede2e9128ff84844218df7ceea8649a740ce0471745f92b9febc00e5ae9",
-      "distributed_sha256": "54e77ede2e9128ff84844218df7ceea8649a740ce0471745f92b9febc00e5ae9",
-      "change": "Source unchanged."
+      "distributed_sha256": "aa2f8751bc5578e18d03db7538718c6717f4e41d1e665f956fe04384ad78f5db",
+      "change": "Remove the redundant random self-subtraction check; retain the algebraic counterexample as a comment. All preceding computations, inputs and tolerances are unchanged."
     },
     {
       "path": "section09/verify_wesh_section9_refinement.py",

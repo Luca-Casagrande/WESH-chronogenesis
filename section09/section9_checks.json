@@ -242,12 +242,12 @@
     {
       "name": "envelope sigma=0.0001",
       "passed": true,
-      "value": 0.05577241640253265
+      "value": 0.05577241640253266
     },
     {
       "name": "envelope sigma=0.00011",
       "passed": true,
-      "value": 0.05076174474553165
+      "value": 0.05076174474553164
     },
     {
       "name": "duration N=10",
@@ -357,22 +357,22 @@
     {
       "name": "Anderson 1d quadrature scale=0.092",
       "passed": true,
-      "max_probability": 0.05000000000000005
+      "max_probability": 0.05000000000000006
     },
     {
       "name": "Anderson 1d quadrature scale=0.4",
       "passed": true,
-      "max_probability": 0.05000000000000006
+      "max_probability": 0.05000000000000005
     },
     {
       "name": "Anderson 1d quadrature scale=0.94",
       "passed": true,
-      "max_probability": 0.05000000000000006
+      "max_probability": 0.05000000000000005
     },
     {
       "name": "Anderson 1d quadrature scale=2.0",
       "passed": true,
-      "max_probability": 0.05000000000000006
+      "max_probability": 0.05000000000000005
     },
     {
       "name": "exact zero-remainder coverage alpha=0.01",
@@ -476,17 +476,13 @@
       "passed": true,
       "exclusion_rate": 0.03808,
       "experiments": 400000
-    },
-    {
-      "name": "independence assumption is necessary",
-      "passed": true
     }
   ],
-  "number_of_checks": 69,
+  "number_of_checks": 68,
   "versions": {
-    "python": "3.13.5",
-    "numpy": "2.3.5",
-    "scipy": "1.17.0",
+    "python": "3.12.10",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
     "sympy": "1.14.0"
   },
   "not_computed": [

@@ -16,7 +16,7 @@ reference models.
 
 ## Run the checks
 
-Python 3.10 or newer is required; the supplied run uses Python 3.13.5. Create a
+Python 3.10 or newer is required; the supplied run uses Python 3.12.10. Create a
 virtual environment, install the dependencies, then run the suite:
 
 ```sh
@@ -25,7 +25,7 @@ python run_all.py
 ```
 
 For the exact tested dependency versions, use `requirements-tested.txt` with
-Python 3.13. All scientific checks run locally without network access or GPU/QPU
+Python 3.12.10. All scientific checks run locally without network access or GPU/QPU
 hardware. `run_all.py` works from any working directory. It verifies the explicit
 script inventory, writes a log beside each program, regenerates the numerical
 outputs and records execution status in `run_summary.json`. It exits nonzero on
@@ -96,5 +96,5 @@ experiments or nuclear-network/CMB likelihood calculation.
 
 Please cite the manuscript and the exact archived release used for reproduction.
 `CITATION.cff` supplies authorship and package metadata. Repository and archive
-identifiers can be added once they exist. The package version is `1.0.0`; its
+identifiers can be added once they exist. The package version is `1.0.1`; its
 creation does not imply publication or acceptance of the manuscript.

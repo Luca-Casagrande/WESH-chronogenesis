@@ -1,9 +1,9 @@
 {
   "environment": {
-    "python": "3.13.5",
+    "python": "3.12.10",
     "sympy": "1.14.0",
-    "numpy": "2.3.5",
-    "scipy": "1.17.0"
+    "numpy": "2.4.6",
+    "scipy": "1.18.0"
   },
   "checks_count": 47,
   "checks": [
@@ -63,7 +63,7 @@
       "name": "cut cone proper-time quadrature",
       "passed": true,
       "ratio": 0.36,
-      "error": 4.440892098500626e-16
+      "error": 3.3306690738754696e-16
     },
     {
       "name": "cut cone proper-time quadrature",

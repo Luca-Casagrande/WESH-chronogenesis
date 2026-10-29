@@ -6,8 +6,8 @@
     "physical_support": 0.0,
     "constraint_commutator": 0.0,
     "neutral_charge_commutator": 0.0,
-    "invariant_two_state_subspace": 5.608077198044061e-16,
-    "two_state_J": 6.836340650691034e-16
+    "invariant_two_state_subspace": 6.882201196704519e-16,
+    "two_state_J": 9.015303371416398e-16
   },
   "randomized_direct_checks": 200,
   "maximum_stationarity_residual": 0.0,

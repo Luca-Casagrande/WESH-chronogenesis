@@ -36,7 +36,7 @@
     {
       "name": "A: complete algebra multiplication",
       "passed": true,
-      "residual": 8.95090418262362e-16,
+      "residual": 0.0,
       "tolerance": 2e-10
     },
     {
@@ -72,19 +72,19 @@
     {
       "name": "A: mixed-state gate isometry 0",
       "passed": true,
-      "residual": 7.771561172376096e-16,
+      "residual": 8.881784197001252e-16,
       "tolerance": 2e-09
     },
     {
       "name": "A: mixed-state gate isometry 1",
       "passed": true,
-      "residual": 4.718447854656915e-16,
+      "residual": 5.551115123125783e-16,
       "tolerance": 2e-09
     },
     {
       "name": "A: mixed-state gate isometry 2",
       "passed": true,
-      "residual": 9.992007221626409e-16,
+      "residual": 1.0547118733938987e-15,
       "tolerance": 2e-09
     },
     {
@@ -102,43 +102,43 @@
     {
       "name": "B: uncertainty budget generator 0",
       "passed": true,
-      "residual": 3.469446951953614e-17,
+      "residual": 2.0816681711721685e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: compensated sector drift 1",
       "passed": true,
-      "residual": 1.1102230246251565e-16,
+      "residual": 0.0,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 1",
       "passed": true,
-      "residual": 1.1102230246251565e-16,
+      "residual": 0.0,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 1",
       "passed": true,
-      "residual": 5.551115123125783e-17,
+      "residual": 2.7755575615628914e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: compensated sector drift 2",
       "passed": true,
-      "residual": 5.551115123125783e-17,
+      "residual": 1.1102230246251565e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 2",
       "passed": true,
-      "residual": 4.163336342344337e-17,
+      "residual": 1.6653345369377348e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 2",
       "passed": true,
-      "residual": 6.938893903907228e-18,
+      "residual": 3.469446951953614e-17,
       "tolerance": 2e-10
     },
     {
@@ -150,13 +150,13 @@
     {
       "name": "B: quadratic-variation density 3",
       "passed": true,
-      "residual": 1.0408340855860843e-17,
+      "residual": 1.3877787807814457e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 3",
       "passed": true,
-      "residual": 3.469446951953614e-18,
+      "residual": 2.7755575615628914e-17,
       "tolerance": 2e-10
     },
     {
@@ -180,73 +180,73 @@
     {
       "name": "B: compensated sector drift 5",
       "passed": true,
-      "residual": 1.942890293094024e-16,
+      "residual": 0.0,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 5",
       "passed": true,
-      "residual": 2.1684043449710089e-16,
+      "residual": 6.071532165918825e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 5",
       "passed": true,
-      "residual": 6.418476861114186e-17,
+      "residual": 1.9081958235744878e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: compensated sector drift 6",
       "passed": true,
-      "residual": 6.938893903907228e-17,
+      "residual": 1.1102230246251565e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 6",
       "passed": true,
-      "residual": 1.457167719820518e-16,
+      "residual": 2.498001805406602e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 6",
       "passed": true,
-      "residual": 2.0816681711721685e-17,
+      "residual": 6.938893903907228e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: compensated sector drift 7",
       "passed": true,
-      "residual": 5.551115123125783e-17,
+      "residual": 1.3877787807814457e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 7",
       "passed": true,
-      "residual": 6.938893903907228e-18,
+      "residual": 0.0,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 7",
       "passed": true,
-      "residual": 4.85722573273506e-17,
+      "residual": 3.469446951953614e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: compensated sector drift 8",
       "passed": true,
-      "residual": 0.0,
+      "residual": 1.1102230246251565e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 8",
       "passed": true,
-      "residual": 0.0,
+      "residual": 5.551115123125783e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 8",
       "passed": true,
-      "residual": 5.551115123125783e-17,
+      "residual": 2.7755575615628914e-17,
       "tolerance": 2e-10
     },
     {
@@ -270,19 +270,19 @@
     {
       "name": "B: compensated sector drift 10",
       "passed": true,
-      "residual": 2.7755575615628914e-17,
+      "residual": 1.457167719820518e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 10",
       "passed": true,
-      "residual": 6.938893903907228e-18,
+      "residual": 1.0755285551056204e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 10",
       "passed": true,
-      "residual": 1.0408340855860843e-17,
+      "residual": 3.8163916471489756e-17,
       "tolerance": 2e-10
     },
     {
@@ -306,31 +306,31 @@
     {
       "name": "B: compensated sector drift 12",
       "passed": true,
-      "residual": 1.1102230246251565e-16,
+      "residual": 1.6653345369377348e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 12",
       "passed": true,
-      "residual": 2.0816681711721685e-16,
+      "residual": 2.8449465006019636e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 12",
       "passed": true,
-      "residual": 6.938893903907228e-17,
+      "residual": 1.0408340855860843e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: compensated sector drift 13",
       "passed": true,
-      "residual": 1.3877787807814457e-17,
+      "residual": 5.551115123125783e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 13",
       "passed": true,
-      "residual": 1.5612511283791264e-17,
+      "residual": 4.5102810375396984e-17,
       "tolerance": 2e-10
     },
     {
@@ -342,19 +342,19 @@
     {
       "name": "B: compensated sector drift 14",
       "passed": true,
-      "residual": 1.6653345369377348e-16,
+      "residual": 5.551115123125783e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 14",
       "passed": true,
-      "residual": 2.706168622523819e-16,
+      "residual": 2.0816681711721685e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 14",
       "passed": true,
-      "residual": 1.0408340855860843e-16,
+      "residual": 3.469446951953614e-17,
       "tolerance": 2e-10
     },
     {
@@ -384,139 +384,7 @@
     {
       "name": "Activity-purity identity",
       "passed": true,
-      "residual": 5.551115123125783e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 5.551115123125783e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 2.7755575615628914e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 8.326672684688674e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 5.5511151231257815e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 5.551115123125783e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 5.551115123125783e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 8.500145032286355e-17,
+      "residual": 1.1102230246251565e-16,
       "tolerance": 2e-10
     },
     {
@@ -552,6 +420,18 @@
     {
       "name": "Activity-purity identity",
       "passed": true,
+      "residual": 4.163336342344337e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
       "residual": 0.0,
       "tolerance": 2e-10
     },
@@ -564,7 +444,127 @@
     {
       "name": "Activity-purity identity",
       "passed": true,
+      "residual": 2.7755575615628914e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 1.1102230246251564e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 1.387778780781446e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 8.153200337090993e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
       "residual": 8.326672684688674e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
       "tolerance": 2e-10
     },
     {
@@ -588,7 +588,7 @@
     {
       "name": "Activity-purity identity",
       "passed": true,
-      "residual": 1.3877787807814457e-17,
+      "residual": 0.0,
       "tolerance": 2e-10
     },
     {
@@ -601,6 +601,54 @@
       "name": "Activity-purity identity",
       "passed": true,
       "residual": 1.3877787807814457e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 6.938893903907228e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 8.326672684688674e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 2.7755575615628914e-17,
       "tolerance": 2e-10
     },
     {
@@ -648,19 +696,7 @@
     {
       "name": "Activity-purity identity",
       "passed": true,
-      "residual": 1.3877787807814457e-16,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 6.938893903907228e-17,
+      "residual": 2.7755575615628914e-17,
       "tolerance": 2e-10
     },
     {
@@ -684,18 +720,6 @@
     {
       "name": "Activity-purity identity",
       "passed": true,
-      "residual": 5.551115123125783e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
       "residual": 2.7755575615628914e-17,
       "tolerance": 2e-10
     },
@@ -708,31 +732,7 @@
     {
       "name": "Activity-purity identity",
       "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
       "residual": 2.7755575615628914e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 5.551115123125783e-17,
       "tolerance": 2e-10
     },
     {
@@ -762,7 +762,7 @@
     {
       "name": "C: trace n=4",
       "passed": true,
-      "residual": 4.440896863058399e-16,
+      "residual": 4.336808689942018e-19,
       "tolerance": 2e-10
     },
     {
@@ -780,7 +780,7 @@
     {
       "name": "C: trace n=8",
       "passed": true,
-      "residual": 4.440921876902839e-16,
+      "residual": 1.1104347626709818e-16,
       "tolerance": 2e-10
     },
     {
@@ -798,7 +798,7 @@
     {
       "name": "C: trace n=16",
       "passed": true,
-      "residual": 1.0842021724855044e-19,
+      "residual": 4.440902818748426e-16,
       "tolerance": 2e-10
     },
     {
@@ -816,7 +816,7 @@
     {
       "name": "C: trace n=32",
       "passed": true,
-      "residual": 1.0842021724855044e-19,
+      "residual": 3.3306697797361844e-16,
       "tolerance": 2e-10
     },
     {
@@ -984,7 +984,7 @@
     {
       "name": "F: normalization q=0.0",
       "passed": true,
-      "residual": 2.220446049250313e-16,
+      "residual": 4.440892098500626e-16,
       "tolerance": 2e-10
     },
     {
@@ -996,25 +996,25 @@
     {
       "name": "F: even imbalance q=0.0",
       "passed": true,
-      "residual": 5.17078047046482e-12,
+      "residual": 5.170752714889204e-12,
       "tolerance": 2e-09
     },
     {
       "name": "F: odd imbalance q=0.0",
       "passed": true,
-      "residual": 4.069612702384262e-12,
+      "residual": 4.069695969111109e-12,
       "tolerance": 2e-09
     },
     {
       "name": "F: parity-weight conservation q=0.3",
       "passed": true,
-      "residual": 2.220446049250313e-16,
+      "residual": 1.1102230246251565e-16,
       "tolerance": 2e-10
     },
     {
       "name": "F: normalization q=0.3",
       "passed": true,
-      "residual": 2.220446049250313e-16,
+      "residual": 1.1102230246251565e-16,
       "tolerance": 2e-10
     },
     {
@@ -1026,25 +1026,25 @@
     {
       "name": "F: even imbalance q=0.3",
       "passed": true,
-      "residual": 5.145577757284525e-12,
+      "residual": 4.837943847618709e-12,
       "tolerance": 2e-09
     },
     {
       "name": "F: odd imbalance q=0.3",
       "passed": true,
-      "residual": 7.556344439052509e-12,
+      "residual": 1.0928424831746497e-11,
       "tolerance": 2e-09
     },
     {
       "name": "F: parity-weight conservation q=0.8",
       "passed": true,
-      "residual": 3.3306690738754696e-16,
+      "residual": 1.1102230246251565e-16,
       "tolerance": 2e-10
     },
     {
       "name": "F: normalization q=0.8",
       "passed": true,
-      "residual": 3.3306690738754696e-16,
+      "residual": 2.220446049250313e-16,
       "tolerance": 2e-10
     },
     {
@@ -1056,37 +1056,37 @@
     {
       "name": "F: even imbalance q=0.8",
       "passed": true,
-      "residual": 9.272174607971584e-12,
+      "residual": 7.922036290852752e-12,
       "tolerance": 2e-09
     },
     {
       "name": "F: odd imbalance q=0.8",
       "passed": true,
-      "residual": 2.800276969601944e-12,
+      "residual": 2.9370137710218146e-12,
       "tolerance": 2e-09
     },
     {
       "name": "F: parity-weight conservation q=1.0",
       "passed": true,
-      "residual": 2.220446049250313e-16,
+      "residual": 4.440892098500626e-16,
       "tolerance": 2e-10
     },
     {
       "name": "F: normalization q=1.0",
       "passed": true,
-      "residual": 2.220446049250313e-16,
+      "residual": 4.440892098500626e-16,
       "tolerance": 2e-10
     },
     {
       "name": "F: total-variation relaxation q=1.0",
       "passed": true,
-      "residual": 7.299168214291996e-12,
+      "residual": 7.298557591628452e-12,
       "tolerance": 2e-09
     },
     {
       "name": "F: even imbalance q=1.0",
       "passed": true,
-      "residual": 2.3061164089455133e-11,
+      "residual": 2.3061386134060058e-11,
       "tolerance": 2e-09
     },
     {
@@ -1137,44 +1137,44 @@
       "frozen": [
         {
           "steps": 4,
-          "error": 0.0001635730199782514,
+          "error": 0.00016357301997828514,
           "upper_bound": 0.19566427449294116
         },
         {
           "steps": 8,
-          "error": 8.114938443731115e-05,
+          "error": 8.1149384437364e-05,
           "upper_bound": 0.09783213724647058
         },
         {
           "steps": 16,
-          "error": 4.0415843375806914e-05,
+          "error": 4.04158433759077e-05,
           "upper_bound": 0.04891606862323529
         },
         {
           "steps": 32,
-          "error": 2.0168264215387966e-05,
+          "error": 2.016826421558e-05,
           "upper_bound": 0.024458034311617645
         }
       ],
       "averaged_products": [
         {
           "steps": 4,
-          "spectator_test_error": 5.980356496207014e-05,
+          "spectator_test_error": 5.980356496206367e-05,
           "epsilon": 0.029133000000000006
         },
         {
           "steps": 8,
-          "spectator_test_error": 8.6956739008773e-06,
+          "spectator_test_error": 8.695673900823263e-06,
           "epsilon": 0.008465999999999987
         },
         {
           "steps": 16,
-          "spectator_test_error": 3.4545047752695447e-06,
+          "spectator_test_error": 3.4545047753100418e-06,
           "epsilon": 0.00673200000000001
         },
         {
           "steps": 32,
-          "spectator_test_error": 8.371528439084066e-07,
+          "spectator_test_error": 8.371528438248506e-07,
           "epsilon": 0.0032640000000000342
         }
       ]
@@ -1183,33 +1183,33 @@
       {
         "q": 0.0,
         "initial_gate": 0.325,
-        "final_gate": 0.0008757971182643265,
+        "final_gate": 0.0008757971182642849,
         "stationary_gate": 0.0,
-        "final_TV": 0.0008757971182643265,
+        "final_TV": 0.0008757971182642849,
         "upper_TV": 0.001201805707856953
       },
       {
         "q": 0.3,
         "initial_gate": 0.3175,
-        "final_gate": 0.14999999999999986,
+        "final_gate": 0.15000000000000002,
         "stationary_gate": 0.15,
-        "final_TV": 0.0007664896058690446,
+        "final_TV": 0.0007664896057859721,
         "upper_TV": 0.001174071729983331
       },
       {
         "q": 0.8,
         "initial_gate": 0.47000000000000003,
-        "final_gate": 0.3999999999999999,
+        "final_gate": 0.4,
         "stationary_gate": 0.4,
-        "final_TV": 0.0009988207048962396,
+        "final_TV": 0.000998820704896198,
         "upper_TV": 0.0011278484335272944
       },
       {
         "q": 1.0,
         "initial_gate": 0.55,
-        "final_gate": 0.5,
+        "final_gate": 0.5000000000000001,
         "stationary_gate": 0.5,
-        "final_TV": 0.0011093591153487348,
+        "final_TV": 0.0011093591153487903,
         "upper_TV": 0.0011093591149448799
       }
     ],

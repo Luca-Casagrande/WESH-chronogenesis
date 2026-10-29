@@ -1,7 +1,7 @@
 {
   "scope": "fixed-background, linear effective scalar response; algebraic checks only",
   "sympy_version": "1.14.0",
-  "numpy_version": "2.3.5",
+  "numpy_version": "2.4.6",
   "total_groups": 59,
   "passed_groups": 59,
   "checks": {
@@ -65,7 +65,7 @@
     "dust_conformal_forcing": true,
     "finite_covariance_positive_pushforward_50_cases": true
   },
-  "minimum_sample_covariance_eigenvalue": 0.0880676006780857,
+  "minimum_sample_covariance_eigenvalue": 0.08806760067809558,
   "not_established_by_checks": [
     "microscopic gravitational matching",
     "spacetime emergence",
@@ -73,5 +73,5 @@
     "uniform stochastic/nonlinear stability",
     "observational likelihood"
   ],
-  "seconds": 3.291
+  "seconds": 3.376
 }

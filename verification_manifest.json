@@ -1,5 +1,5 @@
 {
-  "package_version": "1.0.0",
+  "package_version": "1.0.1",
   "scripts": [
     "appendixE/verify_wesh_appendixE.py",
     "appendixEG/verify_review_refinements.py",

@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "Please cite the WESH manuscript and the particular archived release used for reproduction."
 type: software
 title: "WESH chronogenesis: reproducibility supplement"
-version: 1.0.0
+version: 1.0.1
 authors:
   - family-names: Casagrande
     given-names: Luca

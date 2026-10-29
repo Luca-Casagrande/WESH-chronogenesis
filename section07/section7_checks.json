@@ -52,14 +52,14 @@
   "number_of_checks": 48,
   "all_passed": true,
   "numeric_residuals": {
-    "numeric_Friedmann_residual": 2.8048553063486636e-12,
-    "numeric_retarded_integral": 1.9893739433562985e-12,
-    "numeric_dust_normalization": 2.7497448762403565e-12,
-    "numeric_radiation_normalization": 2.985534042210247e-11,
-    "numeric_independent_trace_a": 2.2943780209061515e-10,
-    "numeric_independent_trace_H": 7.523914824503208e-11,
-    "numeric_reconstructed_response": 1.1398512862748067e-10
+    "numeric_Friedmann_residual": 2.8048605105190916e-12,
+    "numeric_retarded_integral": 1.9893687391858705e-12,
+    "numeric_dust_normalization": 2.7501334542989753e-12,
+    "numeric_radiation_normalization": 2.985522939980001e-11,
+    "numeric_independent_trace_a": 2.2943869026903485e-10,
+    "numeric_independent_trace_H": 7.523887068927593e-11,
+    "numeric_reconstructed_response": 1.1398514250526848e-10
   },
-  "seconds": 0.49469299700001557,
+  "seconds": 0.5315869000041857,
   "scope": "Algebra and numerical consistency of the stated effective closure; no empirical validation."
 }

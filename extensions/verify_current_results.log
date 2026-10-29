@@ -9,44 +9,44 @@
       "frozen": [
         {
           "steps": 4,
-          "error": 0.0001635730199782514,
+          "error": 0.00016357301997828514,
           "upper_bound": 0.19566427449294116
         },
         {
           "steps": 8,
-          "error": 8.114938443731115e-05,
+          "error": 8.1149384437364e-05,
           "upper_bound": 0.09783213724647058
         },
         {
           "steps": 16,
-          "error": 4.0415843375806914e-05,
+          "error": 4.04158433759077e-05,
           "upper_bound": 0.04891606862323529
         },
         {
           "steps": 32,
-          "error": 2.0168264215387966e-05,
+          "error": 2.016826421558e-05,
           "upper_bound": 0.024458034311617645
         }
       ],
       "averaged_products": [
         {
           "steps": 4,
-          "spectator_test_error": 5.980356496207014e-05,
+          "spectator_test_error": 5.980356496206367e-05,
           "epsilon": 0.029133000000000006
         },
         {
           "steps": 8,
-          "spectator_test_error": 8.6956739008773e-06,
+          "spectator_test_error": 8.695673900823263e-06,
           "epsilon": 0.008465999999999987
         },
         {
           "steps": 16,
-          "spectator_test_error": 3.4545047752695447e-06,
+          "spectator_test_error": 3.4545047753100418e-06,
           "epsilon": 0.00673200000000001
         },
         {
           "steps": 32,
-          "spectator_test_error": 8.371528439084066e-07,
+          "spectator_test_error": 8.371528438248506e-07,
           "epsilon": 0.0032640000000000342
         }
       ]
@@ -55,33 +55,33 @@
       {
         "q": 0.0,
         "initial_gate": 0.325,
-        "final_gate": 0.0008757971182643265,
+        "final_gate": 0.0008757971182642849,
         "stationary_gate": 0.0,
-        "final_TV": 0.0008757971182643265,
+        "final_TV": 0.0008757971182642849,
         "upper_TV": 0.001201805707856953
       },
       {
         "q": 0.3,
         "initial_gate": 0.3175,
-        "final_gate": 0.14999999999999986,
+        "final_gate": 0.15000000000000002,
         "stationary_gate": 0.15,
-        "final_TV": 0.0007664896058690446,
+        "final_TV": 0.0007664896057859721,
         "upper_TV": 0.001174071729983331
       },
       {
         "q": 0.8,
         "initial_gate": 0.47000000000000003,
-        "final_gate": 0.3999999999999999,
+        "final_gate": 0.4,
         "stationary_gate": 0.4,
-        "final_TV": 0.0009988207048962396,
+        "final_TV": 0.000998820704896198,
         "upper_TV": 0.0011278484335272944
       },
       {
         "q": 1.0,
         "initial_gate": 0.55,
-        "final_gate": 0.5,
+        "final_gate": 0.5000000000000001,
         "stationary_gate": 0.5,
-        "final_TV": 0.0011093591153487348,
+        "final_TV": 0.0011093591153487903,
         "upper_TV": 0.0011093591149448799
       }
     ],
