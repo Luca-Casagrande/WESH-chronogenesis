@@ -61,10 +61,44 @@ def reduce(a: np.ndarray, dims: Sequence[int], keep: Sequence[int]) -> np.ndarra
     return t.reshape(d, d)
 
 
-def gate(r: np.ndarray, dims: Sequence[int], x: int, y: int) -> float:
+def negativity(pair: np.ndarray, dx: int, dy: int) -> float:
+    """Negativity of a pair state, capped at one: min(1, ||pair^{T_x}||_1 - 1)."""
+    pt = pair.reshape(dx, dy, dx, dy).transpose(2, 1, 0, 3).reshape(dx*dy, dx*dy)
+    return min(1.0, tnorm(pt) - 1.0)
+
+
+def upsilon(pi: np.ndarray, dims: Sequence[int], x: int, y: int) -> np.ndarray:
+    """Negativity-weighted pair correlation of one conditional state."""
     x, y = sorted((x, y))
-    pair = reduce(r, dims, (x, y))
-    return 0.5 * tnorm(pair - np.kron(reduce(r, dims, (x,)), reduce(r, dims, (y,))))
+    pair = reduce(pi, dims, (x, y))
+    product = np.kron(reduce(pi, dims, (x,)), reduce(pi, dims, (y,)))
+    return negativity(pair, dims[x], dims[y]) * (pair - product)
+
+
+def gate(law, dims: Sequence[int], x: int, y: int) -> float:
+    """Entanglement gate of a law given as (weight, pure state) pairs."""
+    return 0.5 * tnorm(sum(w * upsilon(pi, dims, x, y) for w, pi in law))
+
+
+def product_form_gate(law, dims: Sequence[int], x: int, y: int) -> float:
+    """Mean negativity times barycentric correlation; comparison only."""
+    x, y = sorted((x, y))
+    bary = sum(w * pi for w, pi in law)
+    pair = reduce(bary, dims, (x, y))
+    corr = 0.5 * tnorm(pair - np.kron(reduce(bary, dims, (x,)), reduce(bary, dims, (y,))))
+    mean = sum(w * negativity(reduce(pi, dims, (x, y)), dims[x], dims[y]) for w, pi in law)
+    return mean * corr
+
+
+def random_law(d: int, count: int):
+    weights = RNG.dirichlet(np.ones(count))
+    return [(float(w), pure(d)[1]) for w in weights]
+
+
+def ket(*amplitudes) -> np.ndarray:
+    v = np.array(amplitudes, dtype=complex)
+    v = v / np.linalg.norm(v)
+    return np.outer(v, v.conj())
 
 
 def dissip(j: np.ndarray, r: np.ndarray) -> np.ndarray:
@@ -111,28 +145,67 @@ j0, j1 = np.kron(J, I2), np.kron(I2, J)
 JPAIR = [j0, j1, j0 - j1]
 NU, GAMMA = 1.3, 0.7
 
-# 1. Trace-norm gate: product zero, bounds, Lipschitz, unitary invariance,
-#    and contraction under a product channel.
-max_lip = max_unitary = max_contract = max_product = 0.0
+# 1. Entanglement gate of a law: range, zero set, cancellation, Lipschitz
+#    bound in the coupled (Wasserstein) sense, symmetry and local unitaries.
+SWAP2 = np.array([[1,0,0,0],[0,0,1,0],[0,1,0,0],[0,0,0,1]], complex)
+BELLS = [ket(1,0,0,1), ket(1,0,0,-1), ket(0,1,1,0), ket(0,1,-1,0)]
+max_range = max_point = max_unitary = max_swap = 0.0
+max_state_lip = max_law_lip = 0.0
 for _ in range(40):
-    r, e = density(4), density(4)
-    cr, ce = gate(r, (2, 2), 0, 1), gate(e, (2, 2), 0, 1)
-    max_lip = max(max_lip, abs(cr - ce) - 1.5 * tnorm(r - e))
-    ra, rb = density(2), density(2)
-    max_product = max(max_product, gate(np.kron(ra, rb), (2, 2), 0, 1))
+    law = random_law(4, 3)
+    c = gate(law, (2, 2), 0, 1)
+    max_range = max(max_range, -c, c - 1)
+    _, pi = pure(4)
+    eta = negativity(pi, 2, 2)
+    # On a point law the gate is positive exactly when the negativity is.
+    max_point = max(max_point, abs(gate([(1.0, pi)], (2, 2), 0, 1)
+                                   - eta * 0.5 * tnorm(pi - np.kron(reduce(pi,(2,2),(0,)), reduce(pi,(2,2),(1,))))))
     u1, _ = np.linalg.qr(RNG.normal(size=(2, 2)) + 1j * RNG.normal(size=(2, 2)))
     u2, _ = np.linalg.qr(RNG.normal(size=(2, 2)) + 1j * RNG.normal(size=(2, 2)))
     u = np.kron(u1, u2)
-    max_unitary = max(max_unitary, abs(gate(u @ r @ adj(u), (2, 2), 0, 1) - cr))
-    p = 0.41
-    ks = [np.diag([1, np.sqrt(1-p)]), np.array([[0, np.sqrt(p)], [0, 0]])]
-    out = sum(np.kron(k, I2) @ r @ adj(np.kron(k, I2)) for k in ks)
-    max_contract = max(max_contract, gate(out, (2, 2), 0, 1) - cr)
-    assert -TOL <= cr <= 1 + TOL
-check('gate_lipschitz_violation', max_lip)
-check('gate_product_zero', max_product)
+    max_unitary = max(max_unitary, abs(gate([(w, u @ p @ adj(u)) for w, p in law], (2, 2), 0, 1) - c))
+    max_swap = max(max_swap, abs(gate([(w, SWAP2 @ p @ SWAP2) for w, p in law], (2, 2), 0, 1) - c))
+    # Per-state Lipschitz constant d_xy + 3/2, also inside a larger system.
+    for dims, pair in (((2, 2), (0, 1)), ((3, 2), (0, 1)), ((2, 2, 2), (0, 2))):
+        d = int(np.prod(dims)); dxy = min(dims[pair[0]], dims[pair[1]])
+        _, p1 = pure(d)
+        v = RNG.normal(size=d) + 1j * RNG.normal(size=d)
+        w0 = np.linalg.eigh(p1)[1][:, -1] + RNG.choice([1e-2, 1e-1, 1.0]) * v
+        p2 = np.outer(w0, w0.conj()) / np.vdot(w0, w0).real
+        lhs = 0.5 * tnorm(upsilon(p1, dims, *pair) - upsilon(p2, dims, *pair))
+        max_state_lip = max(max_state_lip, lhs - (dxy + 1.5) * tnorm(p1 - p2))
+    # Two laws coupled state by state: W_1 is at most the mean pair distance.
+    other = []
+    for w, p1 in law:
+        v = RNG.normal(size=4) + 1j * RNG.normal(size=4)
+        w0 = np.linalg.eigh(p1)[1][:, -1] + 0.3 * v
+        other.append((w, np.outer(w0, w0.conj()) / np.vdot(w0, w0).real))
+    coupling_cost = sum(w * tnorm(p1 - p2) for (w, p1), (_, p2) in zip(law, other))
+    max_law_lip = max(max_law_lip, abs(c - gate(other, (2, 2), 0, 1)) - 3.5 * coupling_cost)
+check('gate_range_violation', max(0.0, max_range))
+check('gate_point_law_identity', max_point)
 check('gate_local_unitary_residual', max_unitary)
-check('gate_local_channel_contraction_violation', max_contract)
+check('gate_exchange_residual', max_swap)
+check('gate_state_lipschitz_violation', max(0.0, max_state_lip))
+check('gate_law_lipschitz_violation', max(0.0, max_law_lip))
+# Unentangled realizations drop out before the average is taken.
+plus, minus = np.array([1, 1]) / np.sqrt(2), np.array([1, -1]) / np.sqrt(2)
+classical = [(0.5, ket(*np.kron(plus, plus))), (0.5, ket(*np.kron(minus, minus)))]
+check('gate_classical_mixture_zero', gate(classical, (2, 2), 0, 1))
+RES['classical_mixture_barycentric_correlation'] = float(
+    0.5 * tnorm(sum(w * p for w, p in classical) - np.eye(4) / 4))
+# Unpolarized Bell realizations plus classically correlated product ones.
+mixed = [(0.125, b) for b in BELLS] + [(0.25, ket(1,0,0,0)), (0.25, ket(0,0,0,1))]
+check('gate_mixed_branches_zero', gate(mixed, (2, 2), 0, 1))
+check('product_form_comparison_value', abs(product_form_gate(mixed, (2, 2), 0, 1) - 0.125))
+# A pair whose reduction is separable because each site is entangled elsewhere.
+ghz = ket(1,0,0,0,0,0,0,1)
+check('gate_third_party_separable_zero', gate([(1.0, ghz)], (2, 2, 2), 0, 1))
+# Bell law: unit negativity, gate q/2.
+for qq in (0.0, 0.37, 1.0):
+    bell_law = list(zip([(1+qq)/4]*2 + [(1-qq)/4]*2, BELLS))
+    check(f'gate_bell_law_q={qq}', abs(gate(bell_law, (2, 2), 0, 1) - qq / 2))
+check('bell_unit_negativity', max(abs(negativity(b, 2, 2) - 1) for b in BELLS))
 
 # 2. Centered update, norm preservation, and cancellation of conditional
 #    drift with mean jumps. No ensemble simulation is used.
@@ -163,12 +236,12 @@ check('identity_shift_and_rate_rescaling', scale_res)
 #    when the two endpoints are interchanged.
 swap = np.array([[1,0,0,0],[0,0,1,0],[0,1,0,0],[0,0,0,1]], complex)
 h = 0.3*(np.kron(X,I2)+np.kron(I2,X)) + 0.1*np.kron(Z,Z)
-rho = density(4)
+law = random_law(4, 3)
 _, pi = pure(4)
-cs = [NU, NU, GAMMA*gate(rho,(2,2),0,1)]
+cs = [NU, NU, GAMMA*gate(law,(2,2),0,1)]
 b, _, us, ls, _ = event_data(pi, JPAIR, cs, h)
-rhog, pig = swap@rho@swap, swap@pi@swap
-csg = [NU,NU,GAMMA*gate(rhog,(2,2),0,1)]
+lawg, pig = [(w, swap@p@swap) for w, p in law], swap@pi@swap
+csg = [NU,NU,GAMMA*gate(lawg,(2,2),0,1)]
 bg, _, ugs, lgs, _ = event_data(pig,JPAIR,csg,h)
 check('covariant_no_event_drift', tnorm(bg-swap@b@swap))
 check('covariant_channel_intensities', float(np.max(abs(lgs-ls[[1,0,2]]))))
@@ -182,7 +255,8 @@ pis = [np.outer(v,v.conj()) for v in bell]
 q = 0.37
 weights = np.array([(1+q)/4]*2+[(1-q)/4]*2)
 rho = sum(w*p for w,p in zip(weights,pis))
-cs = [NU, NU, GAMMA*q/2]
+cs = [NU, NU, GAMMA*gate(list(zip(weights,pis)),(2,2),0,1)]
+check('bell_gate_value', abs(cs[2]-GAMMA*q/2))
 rate_matrix = np.zeros((4,4))
 activity = []
 for k, pi in enumerate(pis):
@@ -216,15 +290,32 @@ for k in range(4):
     check(f'sharp_null_drift_{k}', tnorm(b))
 check('same_barycenter_computational_law', tnorm(rho-np.diag(np.diag(rho))))
 
-# 5. Spectator extension and frozen CPTP propagation.
-joint = density(8)
+# 5. Spectator extension and frozen CPTP propagation. The conditional
+#    states are pure states of system (two qubits) and spectator (one qubit);
+#    the gate reads only their pair reductions on the system.
+joint_law = random_law(8, 3)
+joint = sum(w*p for w, p in joint_law)
 sys = reduce(joint,(4,2),(0,))
 h = np.kron(X,I2)+0.2*np.kron(I2,X)
-cs = [NU,NU,GAMMA*gate(sys,(2,2),0,1)]
+cgate = gate(joint_law,(2,2,2),0,1)
+cs = [NU,NU,GAMMA*cgate]
 jjs=[np.kron(j,I2) for j in JPAIR]
 djoint=gen(joint,jjs,cs,np.kron(h,I2))
 check('ancilla_system_marginal',tnorm(reduce(djoint,(4,2),(0,))-gen(sys,JPAIR,cs,h)))
 check('ancilla_spectator_marginal',tnorm(reduce(djoint,(4,2),(1,))))
+# A unitary on the spectator leaves every conditional pair reduction unchanged.
+ur, _ = np.linalg.qr(RNG.normal(size=(2, 2)) + 1j * RNG.normal(size=(2, 2)))
+ur = np.kron(np.eye(4), ur)
+check('ancilla_isometry_gate_invariance',
+      abs(gate([(w, ur@p@adj(ur)) for w, p in joint_law],(2,2,2),0,1)-cgate))
+# Resolving the spectator into recorded outcomes is a different law.
+purified = np.zeros(8, complex)
+purified[[0, 6]] = 1 / 2            # |00>|0>, |11>|0>
+purified[[3, 5]] = 1 / 2            # |01>|1>, |10>|1>
+purified = np.outer(purified, purified.conj())
+check('unresolved_spectator_gate', gate([(1.0, purified)],(2,2,2),0,1))
+resolved = [(0.5, BELLS[0]), (0.5, BELLS[2])]
+check('resolved_spectator_gate', abs(gate(resolved,(2,2),0,1)-0.5))
 d=4; ident=np.eye(d)
 mat=-1j*(np.kron(ident,h)-np.kron(h.T,ident))
 for j,c in zip(JPAIR,cs):
@@ -236,21 +327,27 @@ check('frozen_hermiticity',tnorm(out-adj(out)))
 check('frozen_positivity_violation',max(0.,-float(np.linalg.eigvalsh(herm(out)).min())))
 
 # 6. Reduced instantaneous dynamics on a three-vertex path, before/after a
-#    nonselective operation outside A^+ (A={0}, A^+={0,1}, B={2}).
+#    unitary operation outside A^+ (A={0}, A^+={0,1}, B={2}), applied to
+#    every conditional state of the law.
 loc=[]
 for k in range(3):
     ops=[I2,I2,I2]; ops[k]=J
     loc.append(np.kron(np.kron(ops[0],ops[1]),ops[2]))
 js=loc+[loc[0]-loc[1],loc[1]-loc[2]]
 h=0.17*(np.kron(np.kron(X,X),I2)+np.kron(np.kron(I2,X),X))
-rho=density(8)
-ks=[np.diag([1,np.sqrt(0.6)]),np.array([[0,np.sqrt(0.4)],[0,0]])]
-rhop=sum(np.kron(np.eye(4),k)@rho@adj(np.kron(np.eye(4),k)) for k in ks)
-def chain_coeff(r):
-    return [NU]*3+[GAMMA*0.8*gate(r,(2,2,2),0,1),GAMMA*1.2*gate(r,(2,2,2),1,2)]
-a=reduce(gen(rho,js,chain_coeff(rho),h),(2,2,2),(0,))
-b=reduce(gen(rhop,js,chain_coeff(rhop),h),(2,2,2),(0,))
+law3=random_law(8,3)
+ub,_=np.linalg.qr(RNG.normal(size=(2,2))+1j*RNG.normal(size=(2,2)))
+ub=np.kron(np.eye(4),ub)
+law3p=[(w,ub@p@adj(ub)) for w,p in law3]
+def chain_coeff(law):
+    return [NU]*3+[GAMMA*0.8*gate(law,(2,2,2),0,1),GAMMA*1.2*gate(law,(2,2,2),1,2)]
+def bary(law):
+    return sum(w*p for w,p in law)
+a=reduce(gen(bary(law3),js,chain_coeff(law3),h),(2,2,2),(0,))
+b=reduce(gen(bary(law3p),js,chain_coeff(law3p),h),(2,2,2),(0,))
 check('graph_local_instantaneous_influence',tnorm(a-b))
+check('graph_local_edge_gate_unchanged',
+      abs(gate(law3,(2,2,2),0,1)-gate(law3p,(2,2,2),0,1)))
 
 # 7. Reparametrization: integrated intensity and its transformed image.
 S=1.7

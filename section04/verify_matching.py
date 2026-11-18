@@ -42,7 +42,12 @@ dVz=rng.uniform(.1, 1.1,z)
 f=rng.uniform(.01,1.,(z,n,c))
 f/=np.einsum('z,znc->nc',dVz,f)[None,:,:]
 relative('kernel_normalization',np.einsum('z,znc->nc',dVz,f),np.ones((n,c)))
+# Channels 0-2 are vertex channels, 3-4 edge channels. Vertex events carry
+# no response weight; the source is fed by the edge innovations alone.
+vertex=np.array([True,True,True,False,False])
+edge=~vertex
 w=rng.uniform(-1.8,1.8,(n,c))
+w[:,vertex]=0.
 selected=np.array([True,False,True,True,False,True,False])
 V=float(dVz[selected].sum())
 F=np.einsum('z,znc->nc',dVz[selected],f[selected])
@@ -56,17 +61,37 @@ relative('regional_identity_s_vs_tau',var_s,var_tau)
 K=(8*np.pi*G*hbar)**2*np.einsum('znc,ync,nc->zy',f,f,w*w*dA)
 v=np.where(selected,dVz,0)
 relative('spatial_fubini_covariance_check',v@K@v/(V*V),var_s)
-# Conditional target inequality and its saturation case.
+relative('source_reduces_to_edge_sum',var_s,pref*np.sum((w*w*F*F*dA)[:,edge]))
+# Conditional target inequality for the bilocal activity, and saturation.
+# The bound presupposes |F_R|<=1; these normalized positive kernels satisfy it.
+assert float(np.max(np.abs(F))) <= 1+1e-13
 wstar=float(np.max(np.abs(w)))
-upper=pref*wstar*wstar*float(dA.sum())
+A_bi=float(dA[:,edge].sum()); A_tot=float(dA.sum())
+upper=pref*wstar*wstar*A_bi
 assert var_s <= upper*(1+1e-13)
 sigma2=var_s*V/(8*np.pi)**2
 lower=(sigma2/wstar**2)*V/LP4
-assert float(dA.sum()) >= lower*(1-1e-13)
-res['target_activity_bound_ratio']=float(lower/dA.sum())
-var_sat=pref*wstar*wstar*float(dA.sum())
+assert A_tot >= A_bi >= lower*(1-1e-13)
+res['target_bilocal_activity_bound_ratio']=float(lower/A_bi)
+res['target_total_activity_bound_ratio']=float(lower/A_tot)
+var_sat=pref*wstar*wstar*A_bi
 sigma2_sat=var_sat*V/(8*np.pi)**2
-relative('target_bound_saturation',(sigma2_sat/wstar**2)*V/LP4,dA.sum())
+relative('target_bound_saturation',(sigma2_sat/wstar**2)*V/LP4,A_bi)
+
+# Vertex neutrality and unentangled laws: with every edge intensity zero the
+# regional variance is a sum of nonnegative vertex terms. It vanishes for
+# zero vertex weights and is positive for any nonzero one on an active vertex.
+dA_unent=dA.copy(); dA_unent[:,edge]=0.
+w_general=rng.uniform(.2,1.8,(n,c))*rng.choice([-1.,1.],(n,c))
+vertex_terms=pref*(w_general*w_general*F*F*dA_unent).sum(axis=0)
+assert np.all(vertex_terms[vertex]>0) and np.all(vertex_terms[edge]==0)
+res['unentangled_variance_general_vertex_weights']=float(vertex_terms.sum())
+res['unentangled_variance_neutral_vertices']=float(pref*np.sum(w*w*F*F*dA_unent))
+assert res['unentangled_variance_neutral_vertices']==0.
+for k in np.flatnonzero(vertex):
+    single=np.zeros((n,c)); single[:,k]=.7
+    assert pref*np.sum(single*single*F*F*dA_unent)>0
+res['one_active_vertex_weight_suffices']=True
 
 # Exact local/global calibration with bilocal activity retained.
 N=4
@@ -81,7 +106,7 @@ relative('local_proper_rate',ell*local*ds/dtau0,np.ones(n)/tauT)
 relative('common_rate_cancellation',bi/(tauT*local[:,None]),(gamma[:,None]*bi)/(tauT*(gamma*local)[:,None]))
 res['bilocal_increment_strictly_positive']=bool(np.all(tauT*dA_bi>0))
 
-# Constant local quadratic density gives the stated volume scaling.
+# Constant quadratic density of the edge activity gives the volume scaling.
 Ncells, duration, kappa, weight = 17, 4.2, .81, -.43
 LP=np.sqrt(G*hbar)
 V4=Ncells*LP**3*duration

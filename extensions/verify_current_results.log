@@ -1,52 +1,55 @@
 {
   "all_passed": true,
-  "checks": 189,
+  "checks": 241,
   "diagnostics": {
-    "activity_purity_max_residual": 1.3877787807814457e-16,
+    "activity_purity_max_residual": 1.942890293094024e-16,
     "flow": {
-      "M_star": 2.38,
-      "kappa_star": 0.75,
+      "M_star": 7.3500000000000005,
+      "L_star": 30.450000000000003,
+      "kappa_star": 6.125,
+      "coupling_exposure": 0.1,
       "frozen": [
         {
           "steps": 4,
-          "error": 0.00016357301997828514,
-          "upper_bound": 0.19566427449294116
+          "W1_error": 1.951814647359329e-05,
+          "upper_bound": 1.1620656659539201
         },
         {
           "steps": 8,
-          "error": 8.1149384437364e-05,
-          "upper_bound": 0.09783213724647058
+          "W1_error": 9.74459769319258e-06,
+          "upper_bound": 0.5810328329769601
         },
         {
           "steps": 16,
-          "error": 4.04158433759077e-05,
-          "upper_bound": 0.04891606862323529
+          "W1_error": 4.868686807185663e-06,
+          "upper_bound": 0.29051641648848003
         },
         {
           "steps": 32,
-          "error": 2.016826421558e-05,
-          "upper_bound": 0.024458034311617645
+          "W1_error": 2.433441248200774e-06,
+          "upper_bound": 0.14525820824424002
         }
       ],
+      "stability_W1_max": 0.56,
       "averaged_products": [
         {
           "steps": 4,
-          "spectator_test_error": 5.980356496206367e-05,
+          "spectator_test_error": 6.023065995987052e-05,
           "epsilon": 0.029133000000000006
         },
         {
           "steps": 8,
-          "spectator_test_error": 8.695673900823263e-06,
+          "spectator_test_error": 8.74962217572189e-06,
           "epsilon": 0.008465999999999987
         },
         {
           "steps": 16,
-          "spectator_test_error": 3.4545047753100418e-06,
+          "spectator_test_error": 3.477571334063612e-06,
           "epsilon": 0.00673200000000001
         },
         {
           "steps": 32,
-          "spectator_test_error": 8.371528438248506e-07,
+          "spectator_test_error": 8.429423589648098e-07,
           "epsilon": 0.0032640000000000342
         }
       ]

@@ -2,7 +2,7 @@
 """Regression checks of results added after the first reproducibility bundle.
 
 Targets: physical algebra and product embeddings (Appendix A); the sector-weight
-identities (B); finite flow bounds (C); activity/purity; Bell-law relaxation (F);
+identities (B); coupling and flow bounds (C); activity/purity; Bell-law relaxation (F);
 and cross-epoch inherited radiation. Exact finite identities and selected
 numerical examples supplement the manuscript's proofs. They do not establish
 the infinite-time martingale theorems, a continuum limit, or new empirical fits.
@@ -69,11 +69,29 @@ def diss(j, r):
     return j @ r @ j - (j @ j @ r + r @ j @ j)/2
 
 
-def gate(r):
-    t = r.reshape(2,2,2,2)
+def negativity(pair, dx, dy):
+    """Negativity of a pair state, capped at one."""
+    pt = pair.reshape(dx,dy,dx,dy).transpose(2,1,0,3).reshape(dx*dy,dx*dy)
+    return min(1., tn(pt)-1.)
+
+
+def upsilon(pair, dx=2, dy=2):
+    """Negativity-weighted pair correlation of one conditional pair state."""
+    t = pair.reshape(dx,dy,dx,dy)
     x = np.trace(t,axis1=1,axis2=3)
     y = np.trace(t,axis1=0,axis2=2)
-    return .5*tn(r-np.kron(x,y))
+    return negativity(pair,dx,dy)*(pair-np.kron(x,y))
+
+
+def gate(probs, pures, dx=2, dy=2):
+    """Entanglement gate of a law of pure pair states."""
+    return .5*tn(sum(w*upsilon(r,dx,dy) for w,r in zip(probs,pures)))
+
+
+def bell_gate(p):
+    """Gate of a Bell-supported law with weights p: unit negativity and
+    maximally mixed marginals reduce it to (1/2) sum_k |p_k - 1/4|."""
+    return .5*np.abs(np.asarray(p)-.25).sum()
 
 
 I2 = np.eye(2, dtype=complex)
@@ -122,14 +140,22 @@ def physical_algebra():
     check('A: bare compression',tn(adj(v)@np.kron(np.eye(6),jn)@v-(2/3)*np.eye(6)))
     enc=v@np.kron(wn,np.array([[1.],[0.]]))
     enc2=np.kron(enc,enc)
+    dreg=enc.shape[0]
     for i in range(3):
         r=density(4);tens=r.reshape(2,2,2,2)
         rx=np.trace(tens,axis1=1,axis2=3);ry=np.trace(tens,axis1=0,axis2=2)
         rp=enc2@r@adj(enc2)
         ax=enc@rx@adj(enc);ay=enc@ry@adj(enc)
-        # Compute the full encoded pair norm, not a reduced-space shortcut.
-        check(f'A: mixed-state gate isometry {i}',
-              .5*tn(rp-np.kron(ax,ay))-gate(r),2e-9)
+        # First line of the embedding identity, on the full encoded pair space.
+        check(f'A: mixed-state correlation isometry {i}',
+              tn(rp-np.kron(ax,ay))-tn(r-np.kron(rx,ry)),2e-9)
+        # Second line: the partial transpose keeps its nonzero singular values.
+        check(f'A: negativity under embedding {i}',
+              negativity(rp,dreg,dreg)-negativity(r,2,2),2e-9)
+    probs=RNG.dirichlet(np.ones(3));pures=[pure(4) for _ in range(3)]
+    embedded=[enc2@r@adj(enc2) for r in pures]
+    check('A: gate of a law equals gate of its embedded image',
+          gate(probs,embedded,dreg,dreg)-gate(probs,pures),2e-9)
 
 
 def sector_weights():
@@ -171,7 +197,7 @@ def purity_activity():
             pis=[pure(4) for _ in range(count)]
             probs=RNG.dirichlet(np.ones(count))
             rho=sum(p*pi for p,pi in zip(probs,pis))
-            h=.1*rand_h(4);cs=[.6,.6,.9*gate(rho)];tau=.7
+            h=.1*rand_h(4);cs=[.6,.6,.9*gate(probs,pis)];tau=.7
             dr=-1j*comm(h,rho)+sum(c*diss(j,rho) for j,c in zip(JS,cs))
             activity=0.;spread=0.
             for j,c in zip(JS,cs):
@@ -202,42 +228,107 @@ def superop(js,cs,h):
     return a
 
 
+def bell_rate_matrix(nu, c_bi):
+    """Unit-lapse transition generator on (Phi+,Phi-,Psi+,Psi-)."""
+    k1=nu/2;k2=nu/2+c_bi
+    return np.array([[-k1,k1,0,0],[k1,-k1,0,0],[0,0,-k2,k2],[0,0,k2,-k2]])
+
+
 def flow_control():
-    nu=.4;gam=.25;h=.07*(np.kron(X,I2)+np.kron(I2,X));V=.8
-    mstar=2*np.linalg.norm(h,2)+2*sum(c*np.linalg.norm(j,2)**2
-                                         for c,j in zip([nu,nu,gam],JS))
-    kappa=3*gam*np.linalg.norm(JS[2],2)**2
-    def generator(r):return superop(JS,[nu,nu,gam*gate(r)],h)
-    def rhs(t,x):
-        r=x.reshape(4,4,order='F');return generator(r)@x
-    rho0=density(4)
-    sol=solve_ivp(rhs,(0,V),rho0.reshape(-1,order='F'),rtol=1e-11,atol=1e-13,
-                  method='DOP853',dense_output=True)
+    nu=.4;gam=.25;V=.8
+    norms=[np.linalg.norm(j,2)**2 for j in JS]
+    lam=nu*norms[0]+nu*norms[1]+gam*norms[2]
+    dxy=2
+    # --- Constants of the appendix (hbar=1 in these dimensionless checks) ---
+    def constants(hnorm):
+        return (2*hnorm+7*lam, 2*hnorm+29*lam, 7*gam*(dxy+1.5)*norms[2])
+    # --- Per-state estimates behind the coupling inequality ------------------
+    worst={'V':0.,'G':0.,'N':0.,'jump':0.,'speed':0.}
+    for trial in range(400):
+        d=int(RNG.integers(2,6));j=rand_h(d);a=np.linalg.norm(j,2)**2
+        p1=pure(d);vec=np.linalg.eigh(p1)[1][:,-1]
+        w0=vec+RNG.choice([1e-3,1e-2,1e-1,1.])*(RNG.normal(size=d)+1j*RNG.normal(size=d))
+        p2=np.outer(w0,w0.conj())/np.vdot(w0,w0).real
+        dist=tn(p1-p2);ident=np.eye(d)
+        def parts(pi):
+            delta=j-np.trace(j@pi).real*ident
+            var=float(np.trace(pi@delta@delta).real)
+            return var,delta@pi@delta,-(delta@delta@pi+pi@delta@delta)/2+var*pi
+        v1,g1,n1=parts(p1);v2,g2,n2=parts(p2)
+        worst['V']=max(worst['V'],abs(v1-v2)-3*a*dist)
+        worst['G']=max(worst['G'],tn(g1-g2)-8*a*dist)
+        worst['N']=max(worst['N'],tn(n1-n2)-12*a*dist)
+        worst['speed']=max(worst['speed'],tn(n1)-5*a)
+        if min(v1,v2)>1e-12:
+            worst['jump']=max(worst['jump'],min(v1,v2)*tn(g1/v1-g2/v2)-11*a*dist)
+    check('C: variance estimate |V-V~| <= 3 a d',max(0.,worst['V']))
+    check('C: update estimate <= 8 a d',max(0.,worst['G']))
+    check('C: no-event estimate <= 12 a d',max(0.,worst['N']))
+    check('C: no-event norm <= 5 a',max(0.,worst['speed']))
+    check('C: common-jump estimate <= 11 a d',max(0.,worst['jump']))
+    # --- Generator bound with a nonzero Hamiltonian --------------------------
+    h=.07*(np.kron(X,I2)+np.kron(I2,X));hnorm=np.linalg.norm(h,2)
+    mstar,lstar,kappa=constants(hnorm)
+    worst_gen=0.
+    for trial in range(20):
+        probs=RNG.dirichlet(np.ones(3));pures=[pure(4) for _ in range(3)]
+        a=superop(JS,[nu,nu,gam*gate(probs,pures)],h)
+        for _ in range(5):
+            x=RNG.normal(size=(4,4))+1j*RNG.normal(size=(4,4))
+            y=(a@x.reshape(-1,order='F')).reshape(4,4,order='F')
+            worst_gen=max(worst_gen,tn(y)/tn(x)-mstar)
+    check('C: generator trace-norm bound',max(0.,worst_gen))
+    # --- Self-consistent flow on Bell-supported laws (zero Hamiltonian) ------
+    # There the no-event flow vanishes and the law is a four-state chain;
+    # distinct Bell projectors are at trace distance 2, so W_1 = 2 TV.
+    # The constants are convenient, unoptimized upper bounds; a short exposure
+    # keeps the exponential factor of the stated bounds moderate.
+    mstar,lstar,kappa=constants(0.);VC=.1
+    def rhs(v,p):return bell_rate_matrix(nu,gam*bell_gate(p))@p
+    def w1(p,q):return float(np.abs(p-q).sum())
+    p0=np.array([.45,.15,.07,.33])
+    sol=solve_ivp(rhs,(0,VC),p0,rtol=1e-12,atol=1e-14,method='DOP853',dense_output=True)
     if not sol.success:raise RuntimeError(sol.message)
-    reference=lambda t:sol.sol(t).reshape(4,4,order='F')
     errors=[]
     for n in [4,8,16,32]:
-        step=V/n;r=rho0.copy();err=0.
+        step=VC/n;p=p0.copy();err=0.
         for i in range(n):
-            a=generator(r)
-            mid=(expm(step*a/2)@r.reshape(-1,order='F')).reshape(4,4,order='F')
-            err=max(err,tn(mid-reference((i+.5)*step)))
-            r=(expm(step*a)@r.reshape(-1,order='F')).reshape(4,4,order='F')
-            err=max(err,tn(r-reference((i+1)*step)))
-        bound=.5*mstar*step*np.expm1(kappa*V)
+            q_gen=bell_rate_matrix(nu,gam*bell_gate(p))
+            err=max(err,w1(expm(step*q_gen/2)@p,sol.sol((i+.5)*step)))
+            p=expm(step*q_gen)@p
+            err=max(err,w1(p,sol.sol((i+1)*step)))
+        bound=kappa/(lstar+kappa)*mstar*step*np.expm1((lstar+kappa)*VC)
         check(f'C: frozen approximation bound n={n}',max(0.,err-bound),2e-9)
-        check(f'C: trace n={n}',np.trace(r)-1)
-        check(f'C: positivity n={n}',max(0.,-np.linalg.eigvalsh((r+adj(r))/2).min()))
-        errors.append({'steps':n,'error':err,'upper_bound':bound})
-    if errors[-1]['error']>=errors[0]['error']:raise AssertionError('refinement convergence')
-    eta0=.8*rho0+.2*np.eye(4)/4
-    sol2=solve_ivp(rhs,(0,V),eta0.reshape(-1,order='F'),rtol=1e-11,atol=1e-13,
-                   method='DOP853',dense_output=True)
+        check(f'C: frozen law normalization n={n}',p.sum()-1)
+        check(f'C: frozen law positivity n={n}',max(0.,-p.min()))
+        rho=sum(w*pi for w,pi in zip(p,PIS))
+        check(f'C: frozen barycenter positivity n={n}',max(0.,-np.linalg.eigvalsh(rho).min()))
+        errors.append({'steps':n,'W1_error':err,'upper_bound':float(bound)})
+    if errors[-1]['W1_error']>=errors[0]['W1_error']:raise AssertionError('refinement convergence')
+    # Mesh convergence at first order, as the bound predicts.
+    check('C: first-order mesh convergence',
+          max(0.,errors[-1]['W1_error']/errors[0]['W1_error']-.2))
+    q0=np.array([.30,.28,.22,.20])
+    sol2=solve_ivp(rhs,(0,VC),q0,rtol=1e-12,atol=1e-14,method='DOP853',dense_output=True)
     if not sol2.success:raise RuntimeError(sol2.message)
-    for t in np.linspace(0,V,21):
-        distance=tn(reference(t)-sol2.sol(t).reshape(4,4,order='F'))
-        check('C: gate-controlled initial-data bound',
-              max(0.,distance-np.exp(kappa*t)*tn(rho0-eta0)),2e-9)
+    stability=[]
+    for tgrid in np.linspace(0,VC,21):
+        distance=w1(sol.sol(tgrid),sol2.sol(tgrid))
+        check('C: initial-data stability in W_1',
+              max(0.,distance-np.exp((lstar+kappa)*tgrid)*w1(p0,q0)),2e-9)
+        bary=tn(sum((a-b)*pi for a,b,pi in zip(sol.sol(tgrid),sol2.sol(tgrid),PIS)))
+        check('C: barycenter distance bounded by W_1',max(0.,bary-distance))
+        stability.append(distance)
+    # Coefficient Lipschitz bound on the same pair of laws.
+    for tgrid in np.linspace(0,VC,5):
+        pa,pb=sol.sol(tgrid),sol2.sol(tgrid)
+        check('C: coefficient Lipschitz bound',
+              max(0.,gam*abs(bell_gate(pa)-bell_gate(pb))-gam*(dxy+1.5)*w1(pa,pb)))
+    # kappa=0: coefficients do not depend on the law and the barycentric flow contracts.
+    lin=expm(V*superop(JS,[nu,nu,0.],h))
+    r1,r2=density(4),density(4)
+    out=lambda r:(lin@r.reshape(-1,order='F')).reshape(4,4,order='F')
+    check('C: contraction without bilocal coupling',max(0.,tn(out(r1)-out(r2))-tn(r1-r2)))
     # Measurable path with one discontinuity; exact cell averages of c_bi.
     cut=.317;c1=.08;c2=.23
     A1=superop(JS,[nu,nu,c1],h);A2=superop(JS,[nu,nu,c2],h)
@@ -261,18 +352,23 @@ def flow_control():
         error=tn(extend(Up-U,joint))
         check(f'C: averaged-product finite spectator n={n}',max(0.,error-eps),2e-9)
         product_checks.append({'steps':n,'spectator_test_error':error,'epsilon':eps})
-    DIAGNOSTICS['flow']={'M_star':mstar,'kappa_star':kappa,'frozen':errors,
+    DIAGNOSTICS['flow']={'M_star':mstar,'L_star':lstar,'kappa_star':kappa,
+                         'coupling_exposure':VC,
+                         'frozen':errors,'stability_W1_max':max(stability),
                          'averaged_products':product_checks}
 
 
 def bell_relaxation():
     nu=.7;gam=.9;records=[]
+    for _ in range(10):
+        weights=RNG.dirichlet(np.ones(4))
+        check('F: Bell-supported gate formula',gate(weights,PIS)-bell_gate(weights))
     for q in [0.,.3,.8,1.]:
         even=(1+q)/2;odd=(1-q)/2
         p0=np.array([.8*even,.2*even,.15*odd,.85*odd])
         target=np.array([even/2]*2+[odd/2]*2)
         def rhs(v,y):
-            p=y[:4];c=.5*np.abs(p-.25).sum()
+            p=y[:4];c=bell_gate(p)
             k1=nu/2;k2=nu/2+gam*c
             return [k1*(p[1]-p[0]),k1*(p[0]-p[1]),
                     k2*(p[3]-p[2]),k2*(p[2]-p[3]),c]
@@ -288,8 +384,8 @@ def bell_relaxation():
         check(f'F: total-variation relaxation q={q}',max(0.,np.max(tv-bound)),2e-9)
         check(f'F: even imbalance q={q}',np.max(abs(p[0]-p[1]-(p0[0]-p0[1])*np.exp(-nu*grid))),2e-9)
         check(f'F: odd imbalance q={q}',np.max(abs(p[2]-p[3]-(p0[2]-p0[3])*np.exp(-nu*grid-2*gam*integral))),2e-9)
-        records.append({'q':q,'initial_gate':float(.5*np.abs(p0-.25).sum()),
-                        'final_gate':float(.5*np.abs(p[:,-1]-.25).sum()),
+        records.append({'q':q,'initial_gate':float(bell_gate(p0)),
+                        'final_gate':float(bell_gate(p[:,-1])),
                         'stationary_gate':q/2,'final_TV':float(tv[-1]),'upper_TV':float(bound[-1])})
     DIAGNOSTICS['bell_relaxation']=records
 

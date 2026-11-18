@@ -1,6 +1,6 @@
 {
   "all_checks_passed": true,
-  "exact_symbolic_checks": 94,
+  "exact_symbolic_checks": 109,
   "finite_lift_residuals": {
     "constraint_isometry": 0.0,
     "physical_support": 0.0,

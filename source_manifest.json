@@ -1,12 +1,12 @@
 {
-  "package_version": "1.0.1",
+  "package_version": "2.0.0",
   "input_archive": {
     "name": "WESH_Online_Resource_1.zip",
     "sha256": "fc166cd3824317523b313473f86a86edda66c047c5e9ee26d6edc9001c26c071"
   },
   "manuscript_alignment": {
-    "source_name": "main (32).tex",
-    "sha256": "930f000d2fb31edc58b85d016cd0d79cd52551fd2567596accfd8200dacbfc62",
+    "source_name": "main_40_armonizzato.tex",
+    "sha256": "4cd89f32b086881d9011942c5ab05cb02df1841e2fb425ff17745b06aebf0c64",
     "method": "Stable equation/proposition labels; no manuscript source redistributed."
   },
   "scripts": [
@@ -31,8 +31,9 @@
     {
       "path": "extensions/verify_current_results.py",
       "source_sha256": null,
-      "distributed_sha256": "9df30faa428c1352df7872360fc312213327de74914810abfad1bda886e03e43",
-      "change": "Added regression checks of results already in the aligned manuscript."
+      "distributed_sha256": "b7e8994e2be6e01414c5bf8a037ddc5df1ae8aab8a57f2b410478c6696408646",
+      "change": "Negativity-preserving physical embeddings, updated law-dependent gate, finite generator and coupling estimates, and flow approximation/stability examples in W_1.",
+      "update_source_sha256": "b7e8994e2be6e01414c5bf8a037ddc5df1ae8aab8a57f2b410478c6696408646"
     },
     {
       "path": "section02/verify_lifts_and_primitives.py",
@@ -49,20 +50,23 @@
     {
       "path": "section03/verify_event_record.py",
       "source_sha256": "61f0379a507f64322fccb102766cad9f9887f27f61af0f7aa0544fffd3ffb6b0",
-      "distributed_sha256": "c1e344df04d87e72431509f5ed63dd80bc965095641800239f7244a1e74a71b3",
-      "change": "Documentation/provenance cleanup; mathematical checks retained."
+      "distributed_sha256": "660c2c6d0b83297eb25d260fe705dbeff8222b2debfa1eaadcc13ac36ceb2232",
+      "change": "Law-dependent entanglement gate and event-record comparisons with zero vertex response weights and no local amplitude floor.",
+      "update_source_sha256": "660c2c6d0b83297eb25d260fe705dbeff8222b2debfa1eaadcc13ac36ceb2232"
     },
     {
       "path": "section03/verify_section3.py",
       "source_sha256": "4bfedd292f96ff3ef8cdaf44f90892f9937d8458831db452997cbba1b9487faa",
-      "distributed_sha256": "4bfedd292f96ff3ef8cdaf44f90892f9937d8458831db452997cbba1b9487faa",
-      "change": "Source unchanged."
+      "distributed_sha256": "bc5e8d512c627ca7488076b0dc024f8b8fbae8150c5c32ec78a40eec15cc0765",
+      "change": "Negativity-weighted conditional pair correlations averaged over the law; product-law neutrality, law Lipschitz bounds, spectator embeddings and instantaneous locality.",
+      "update_source_sha256": "bc5e8d512c627ca7488076b0dc024f8b8fbae8150c5c32ec78a40eec15cc0765"
     },
     {
       "path": "section04/verify_matching.py",
       "source_sha256": "862b200744d6705770b58dee8b1e88cf94a2d2e8995271f0db95a65a13e11e9c",
-      "distributed_sha256": "d578fd2f7a6c89fa708efc6ff41a759f8124d49af01da7f2ab27c74fe89b0744",
-      "change": "Documentation/provenance cleanup; mathematical checks retained."
+      "distributed_sha256": "158ce8ceadf697e5011faaa4efd431fb6af0a5f8f4dda907263ddcb33d383463",
+      "change": "Edge-only response, bilocal activity bound and finite-array checks of vertex neutrality (Proposition 4.5).",
+      "update_source_sha256": "158ce8ceadf697e5011faaa4efd431fb6af0a5f8f4dda907263ddcb33d383463"
     },
     {
       "path": "section04/verify_time_change.py",
@@ -73,14 +77,16 @@
     {
       "path": "section05/verify_additions.py",
       "source_sha256": "cb07b4c9c5cdd9740af628583a30e0e95ec80e4ddfa451c4355c4aac30e53fb9",
-      "distributed_sha256": "cb07b4c9c5cdd9740af628583a30e0e95ec80e4ddfa451c4355c4aac30e53fb9",
-      "change": "Source unchanged."
+      "distributed_sha256": "26af1d11f1f89e7db0a781cf12d33247b0b5fc79ea8a5bbe3d5abdfadfc0bb5c",
+      "change": "Regional variance without a local floor, aligned active stationary sector identities (Proposition 5.3), and amplitude-bound arithmetic using the unchanged Section 9 endpoint.",
+      "update_source_sha256": "26af1d11f1f89e7db0a781cf12d33247b0b5fc79ea8a5bbe3d5abdfadfc0bb5c"
     },
     {
       "path": "section05/verify_section5.py",
       "source_sha256": "1514f49372793cad542c1d7849d6708c7c9ecee5521757f167480b3f9b4b91c9",
-      "distributed_sha256": "f405ab88c863d729bbd050fe6b0e85aecff83db6c9fb2724fa2a322298537de2",
-      "change": "Correct the documented run path; mathematical checks unchanged."
+      "distributed_sha256": "73a70fbbfe0b70bb34858f024313326b306f009d0656a714370da5eed2433ed5",
+      "change": "Bell-law negativity, zero vertex response weights and the amplitude r_bi*w_bi^2*q*(1-q)/2, including both zero-amplitude endpoints.",
+      "update_source_sha256": "73a70fbbfe0b70bb34858f024313326b306f009d0656a714370da5eed2433ed5"
     },
     {
       "path": "section06/verify_section6_refinements.py",
@@ -130,5 +136,10 @@
       "distributed_sha256": "92c579715e8ec10845105475508329a03e28cc2e3835c93fd7ba3e98c97fe837",
       "change": "Source unchanged."
     }
-  ]
+  ],
+  "update_archive": {
+    "name": "WESH_repo_script_aggiornati.zip",
+    "sha256": "372a629a2e6b3e616341d3b4922dd4d98607a5449389cd4a951c89bc639259a5",
+    "method": "Six replacement scripts. Original input_archive and source_sha256 fields retain the earlier provenance; update_source_sha256 identifies each supplied replacement. Distributed text uses LF line endings."
+  }
 }

@@ -14,6 +14,30 @@ inputs and the outputs of a complete run. The checks include symbolic identities
 finite matrices, ODE integrations and seeded sampling of the declared statistical
 reference models.
 
+## Version 2.0.0
+
+This version aligns six programs with `main_40_armonizzato.tex`; the other
+fourteen programs and the BBN inputs are unchanged. The manuscript source is
+identified by SHA-256 in `source_manifest.json` and is not redistributed.
+
+- The entanglement gate averages conditional pair correlations, weighted by
+  capped negativity, over the law and then takes one half the trace norm.
+  It depends on the law, not just its barycenter.
+- Vertex response weights are zero: vertex events calibrate time while edge
+  innovations supply the curvature response (Proposition 4.5).
+- The Bell realization has
+  `sigma_eff^2 = (r_bi * w_bi^2 / 2) * q * (1-q)`, with no local floor.
+  The aligned active stationary sector is checked through the finite identities
+  of Proposition 5.3; its unique barycenter does not imply a unique phase law.
+- The Appendix C examples use the updated finite constants and `W_1` estimates
+  for frozen-flow approximation and initial-law stability. The short coupling
+  exposure is intentionally `0.1`.
+
+The BBN endpoint is unchanged. Its amplitude-bound consequences are approximately
+`r_bi*w_bi^2 <= 1.0e-7` at `q=1/2`, `q*(1-q) <= 2.5e-8` at unit coupling,
+and `(1-q)/2 <= 1.25e-8` near alignment at unit coupling.
+See `RELEASE_NOTES.md` and `VERIFICATION_REPORT.md` for the supplied execution.
+
 ## Run the checks
 
 Python 3.10 or newer is required; the supplied run uses Python 3.12.10. Create a
@@ -95,6 +119,6 @@ programs; the package contains no new observational measurements, hardware
 experiments or nuclear-network/CMB likelihood calculation.
 
 Please cite the manuscript and the exact archived release used for reproduction.
-`CITATION.cff` supplies authorship and package metadata. Repository and archive
-identifiers can be added once they exist. The package version is `1.0.1`; its
+`CITATION.cff` supplies authorship and package metadata.
+The package version is `2.0.0`; its
 creation does not imply publication or acceptance of the manuscript.

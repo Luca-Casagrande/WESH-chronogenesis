@@ -16,7 +16,7 @@ import sympy as sp
 q = sp.symbols('q', real=True)
 nu, tau = sp.symbols('nu tau_T', positive=True)
 gamma = sp.symbols('gamma_bi', nonnegative=True)
-wl, wb = sp.symbols('w_loc w_bi', real=True)
+wb = sp.symbols('w_bi', real=True)
 scale = sp.symbols('scale', positive=True)
 I = sp.eye(2)
 Z = sp.diag(1, -1)
@@ -55,8 +55,23 @@ equal(rho_x, I/2, 'Marginal x')
 equal(rho_y, I/2, 'Marginal y')
 # On q in [0,1], the difference from the product marginal has eigenvalues
 # q/4, -q/4, -q/4, q/4, hence one half its trace norm is q/2.
-equal(rho-sp.kronecker_product(rho_x,rho_y), q*sp.diag(1,-1,-1,1)/4,
-      'Gate spectrum and product-faithfulness')
+# Entanglement gate of the law. Every Bell projector has partial transpose
+# with eigenvalues 1/2,1/2,1/2,-1/2, hence unit negativity, and maximally
+# mixed marginals; the negativity-weighted average is rho - 1/4.
+def partial_transpose(m: sp.Matrix) -> sp.Matrix:
+    return sp.Matrix(4, 4, lambda a, b: m[2*(b//2)+a%2, 2*(a//2)+b%2])
+R_ent = sp.zeros(4)
+for k, pi in enumerate(projectors):
+    eig = partial_transpose(pi).eigenvals()
+    equal(sum(abs(val)*mult for val, mult in eig.items())-1, 1,
+          f'Unit negativity of Bell state {k}')
+    px = sp.Matrix(2, 2, lambda a,b: sum(pi[2*a+j,2*b+j] for j in range(2)))
+    py = sp.Matrix(2, 2, lambda a,b: sum(pi[2*j+a,2*j+b] for j in range(2)))
+    equal(px, I/2, f'Bell marginal x {k}')
+    equal(py, I/2, f'Bell marginal y {k}')
+    R_ent += weights[k]*(pi-sp.kronecker_product(px, py))
+equal(R_ent, rho-I4/4, 'Negativity-weighted correlation average')
+equal(R_ent, q*sp.diag(1,-1,-1,1)/4, 'Gate spectrum: one half trace norm is q/2')
 Q = sp.zeros(4)
 state_rates: list[list[sp.Expr]] = []
 for k,(v,pi) in enumerate(zip(vectors,projectors)):
@@ -91,7 +106,7 @@ mean_bi = sum(weights[k]*state_rates[k][2] for k in range(4))
 equal(mean_bi, gamma*q*(1-q)/4, 'Mean bilocal unit-lapse rate')
 equal(tau*sum(weights[k]*sum(state_rates[k]) for k in range(4)),
       tau*(nu/2+gamma*q*(1-q)/4), 'Mean time-production')
-response_weights = [wl,wl,wb]
+response_weights = [0,0,wb]  # vertex events are curvature-neutral
 proper_rates = [[sp.simplify(a*4/(tau*nu)) for a in row] for row in state_rates]
 q2 = 0
 joint_activity = 0
@@ -104,18 +119,20 @@ for k, row in enumerate(proper_rates):
     equal(beta, 2+2*gamma*q*eps/nu, f'Exact beta {k}')
     proportions = [a/sum(row) for a in row]
     W2 = sum(p*w*w for p,w in zip(proportions,response_weights))
-    equal(beta*W2, 2*wl**2+2*gamma*q*wb**2*eps/nu, f'Joint beta-W2 {k}')
+    equal(beta*W2, 2*gamma*q*wb**2*eps/nu, f'Joint beta-W2 {k}')
     q2 += weights[k]*sum(w*w*a for w,a in zip(response_weights,row))
     joint_activity += weights[k]*beta*W2
-sigma2 = wl**2+gamma*wb**2*q*(1-q)/(2*nu)
+sigma2 = gamma*wb**2*q*(1-q)/(2*nu)
 equal(q2, 2*sigma2/tau, 'Weighted activity amplitude')
 equal(joint_activity, 2*sigma2, 'Regional weighted-activity identity')
 equal(sigma2.subs({nu:scale*nu,gamma:scale*gamma}),sigma2,
       'Common-rate cancellation at fixed law')
 for endpoint in (0,1):
-    equal(sigma2.subs(q,endpoint),wl**2,f'Local floor at q={endpoint}')
-equal(sigma2.subs(q,sp.Rational(1,2)),wl**2+gamma*wb**2/(8*nu),
-      'Maximum bilocal excess')
+    equal(sigma2.subs(q,endpoint),0,f'Extinction at q={endpoint}')
+equal(sigma2.subs(q,sp.Rational(1,2)),gamma*wb**2/(8*nu),
+      'Maximum amplitude at q=1/2')
+equal(sp.diff(sigma2,q).subs(q,sp.Rational(1,2)),0,'Stationary point at q=1/2')
+equal(sigma2-(gamma/nu)*wb**2*q*((1-q)/2),0,'Misaligned-occupation form')
 # The optional effective spatial realization is specified explicitly:
 # disconnected copies, product initial law, independent drivers, identical q.
 Q2 = sp.kronecker_product(Q,I4)+sp.kronecker_product(I4,Q)
@@ -129,7 +146,7 @@ Ef2 = sum(sp.binomial(nb,k)*p_odd**k*(1-p_odd)**(nb-k)*sp.Rational(k*k,nb*nb)
           for k in range(nb+1))
 equal(Ef,p_odd,'Spatial fraction expectation (finite exact binomial check)')
 equal(Ef2-Ef**2,(1-q*q)/(4*nb),'Spatial fraction variance')
-equal(wl**2+gamma*q*wb**2*Ef/nu,sigma2,'Spatial average expectation')
+equal(gamma*q*wb**2*Ef/nu,sigma2,'Spatial average expectation')
 
 # Independent numerical check of the finite constraint lift and its 2-state restriction.
 rng=np.random.default_rng(20261014)
@@ -167,7 +184,7 @@ max_stationarity=0.
 max_amplitude=0.
 for _ in range(200):
     qq=rng.uniform(0,1); nn=rng.uniform(.1,5); gg=rng.uniform(0,7)
-    aa,bb=rng.normal(size=2); tt=rng.uniform(.1,4)
+    bb=rng.normal(); tt=rng.uniform(.1,4)
     probs=np.array([(1+qq)/4]*2+[(1-qq)/4]*2)
     rn=sum(pr*pi for pr,pi in zip(probs,pin))
     cc=[nn,nn,gg*qq/2]
@@ -175,13 +192,13 @@ for _ in range(200):
     max_stationarity=max(max_stationarity,float(np.linalg.norm(stat)))
     actual=0.
     for pr,pi in zip(probs,pin):
-        for j,c,w in zip(Jn,cc,[aa,aa,bb]):
+        for j,c,w in zip(Jn,cc,[0.,0.,bb]):
             mean=np.trace(pi@j).real
             var=(np.trace(pi@j@j).real-mean*mean)
             actual += pr*w*w*c*var*4/(tt*nn)
-    pred=aa*aa+gg/nn*bb*bb*qq*(1-qq)/2
+    pred=gg/nn*bb*bb*qq*(1-qq)/2
     max_amplitude=max(max_amplitude,abs(actual*tt/2-pred))
-    assert aa*aa-1e-12 <= pred <= aa*aa+gg/nn*bb*bb/8+1e-12
+    assert -1e-12 <= pred <= gg/nn*bb*bb/8+1e-12
 assert max_stationarity<1e-12 and max_amplitude<1e-12
 report={
  'all_checks_passed':True,

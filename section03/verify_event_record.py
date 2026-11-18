@@ -62,9 +62,14 @@ states=[np.outer(k,k.conj()) for k in kets]
 def ptr(rho,keep):
     t=rho.reshape(2,2,2,2)
     return np.trace(t,axis1=1,axis2=3) if keep==0 else np.trace(t,axis1=0,axis2=2)
-def gate(rho):
-    diff=rho-np.kron(ptr(rho,0),ptr(rho,1))
-    return np.abs(np.linalg.eigvalsh(diff)).sum()/2
+def negativity(pair):
+    pt=pair.reshape(2,2,2,2).transpose(2,1,0,3).reshape(4,4)
+    return min(1.,np.linalg.svd(pt,compute_uv=False).sum()-1.)
+def gate(probs,pures):
+    """Entanglement gate of a law: one half the trace norm of the average
+    of the negativity-weighted pair correlations of its pure states."""
+    mean=sum(w*negativity(r)*(r-np.kron(ptr(r,0),ptr(r,1))) for w,r in zip(probs,pures))
+    return np.abs(np.linalg.eigvalsh(mean)).sum()/2
 
 def Var(r,A):
     return float(np.real(np.trace(A@A@r)-np.trace(A@r)**2))
@@ -77,8 +82,9 @@ sigma_results=[]
 for q in [0.,.1,.25,.6,.99,1.]:
     probs=np.array([(1+q)/4]*2+[(1-q)/4]*2)
     rho=sum(w*r for w,r in zip(probs,states))
-    maxres=max(maxres,abs(gate(rho)-q/2),np.linalg.norm(rho-(np.eye(4)+q*np.kron(Z,Z))/4))
-    coeff=[1.,1.,2.3*gate(rho)]
+    g=gate(probs,states)
+    maxres=max(maxres,abs(g-q/2),np.linalg.norm(rho-(np.eye(4)+q*np.kron(Z,Z))/4))
+    coeff=[1.,1.,2.3*g]
     drifts=[]; rates=[]
     for r in states:
         drift=np.zeros((4,4));vr=[]
@@ -92,22 +98,23 @@ for q in [0.,.1,.25,.6,.99,1.]:
     meanbi=float(np.dot(probs,np.array(rates)[:,2]))
     maxres=max(maxres,abs(meanbi-2.3*q*(1-q)/4))
     # Local calibration d tau = (c/4) ds, tau_T=1 and block volume=2.
-    wloc=.3;wbi=.4;r_bi=2.3
-    per_sector=[wloc**2, wloc**2+r_bi*q*wbi**2]
+    # Vertex events carry no response weight; only the mismatch channel does.
+    wbi=.4;r_bi=2.3
+    per_sector=[0., r_bi*q*wbi**2]
     sigma_eff=(1+q)/2*per_sector[0]+(1-q)/2*per_sector[1]
-    expected=wloc**2+.5*r_bi*wbi**2*q*(1-q)
+    expected=.5*r_bi*wbi**2*q*(1-q)
     maxres=max(maxres,abs(sigma_eff-expected))
-    sigma_results.append({'q':q,'gate_global':float(gate(rho)), 'conditional_gate_even':float(gate((states[0]+states[1])/2)),
-         'conditional_gate_odd':float(gate((states[2]+states[3])/2)), 'mean_bilocal_aux_rate':meanbi,
+    sigma_results.append({'q':q,'gate_global':float(g), 'conditional_gate_even':float(gate([.5,.5],states[:2])),
+         'conditional_gate_odd':float(gate([.5,.5],states[2:])), 'mean_bilocal_aux_rate':meanbi,
          'amplitude_even_fixed_global_law':per_sector[0], 'amplitude_odd_fixed_global_law':per_sector[1], 'amplitude_law_average':sigma_eff})
 assert maxres<1e-12
 
 # Explicit demonstration that conditioning the covariance != changing the gate.
 # q=.6 has global gate .3 but an independently reclosed odd law has gate .5.
 q=sp.symbols('q', nonnegative=True)
-r,wl,wb=sp.symbols('r w_l w_b', real=True)
-old=wl**2+r*wb**2*q*(1-q)/2
-new_mix=wl**2+r*wb**2*(1-q)/2
+r,wb=sp.symbols('r w_b', real=True)
+old=r*wb**2*q*(1-q)/2
+new_mix=r*wb**2*(1-q)/2
 assert sp.simplify(new_mix-old-r*wb**2*(1-q)**2/2)==0
 
 # Branch preservation is weaker than commutation with the constraints.

@@ -1,7 +1,7 @@
 {
   "all_passed": true,
   "seed": 20261028,
-  "number_of_checks": 189,
+  "number_of_checks": 241,
   "checks": [
     {
       "name": "A: declared Fourier convention",
@@ -70,39 +70,63 @@
       "tolerance": 2e-10
     },
     {
-      "name": "A: mixed-state gate isometry 0",
+      "name": "A: mixed-state correlation isometry 0",
       "passed": true,
-      "residual": 8.881784197001252e-16,
+      "residual": 1.7763568394002505e-15,
       "tolerance": 2e-09
     },
     {
-      "name": "A: mixed-state gate isometry 1",
+      "name": "A: negativity under embedding 0",
       "passed": true,
-      "residual": 5.551115123125783e-16,
+      "residual": 2.6645352591003757e-15,
       "tolerance": 2e-09
     },
     {
-      "name": "A: mixed-state gate isometry 2",
+      "name": "A: mixed-state correlation isometry 1",
       "passed": true,
-      "residual": 1.0547118733938987e-15,
+      "residual": 1.1102230246251565e-15,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "A: negativity under embedding 1",
+      "passed": true,
+      "residual": 2.6645352591003757e-15,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "A: mixed-state correlation isometry 2",
+      "passed": true,
+      "residual": 2.1094237467877974e-15,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "A: negativity under embedding 2",
+      "passed": true,
+      "residual": 3.774758283725532e-15,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "A: gate of a law equals gate of its embedded image",
+      "passed": true,
+      "residual": 3.191891195797325e-16,
       "tolerance": 2e-09
     },
     {
       "name": "B: compensated sector drift 0",
       "passed": true,
-      "residual": 0.0,
+      "residual": 1.6653345369377348e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 0",
       "passed": true,
-      "residual": 6.938893903907228e-18,
+      "residual": 1.8041124150158794e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 0",
       "passed": true,
-      "residual": 2.0816681711721685e-17,
+      "residual": 4.163336342344337e-17,
       "tolerance": 2e-10
     },
     {
@@ -114,61 +138,61 @@
     {
       "name": "B: quadratic-variation density 1",
       "passed": true,
-      "residual": 0.0,
+      "residual": 2.992397996059992e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 1",
       "passed": true,
-      "residual": 2.7755575615628914e-17,
+      "residual": 8.239936510889834e-18,
       "tolerance": 2e-10
     },
     {
       "name": "B: compensated sector drift 2",
       "passed": true,
-      "residual": 1.1102230246251565e-16,
+      "residual": 6.938893903907228e-18,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 2",
       "passed": true,
-      "residual": 1.6653345369377348e-16,
+      "residual": 2.439454888092385e-19,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 2",
       "passed": true,
-      "residual": 3.469446951953614e-17,
+      "residual": 2.791820594150174e-18,
       "tolerance": 2e-10
     },
     {
       "name": "B: compensated sector drift 3",
       "passed": true,
-      "residual": 2.7755575615628914e-17,
+      "residual": 8.326672684688674e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 3",
       "passed": true,
-      "residual": 1.3877787807814457e-17,
+      "residual": 1.3400738851920835e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 3",
       "passed": true,
-      "residual": 2.7755575615628914e-17,
+      "residual": 7.155734338404329e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: compensated sector drift 4",
       "passed": true,
-      "residual": 1.1102230246251565e-16,
+      "residual": 5.551115123125783e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 4",
       "passed": true,
-      "residual": 2.7755575615628914e-17,
+      "residual": 5.551115123125783e-17,
       "tolerance": 2e-10
     },
     {
@@ -180,85 +204,85 @@
     {
       "name": "B: compensated sector drift 5",
       "passed": true,
-      "residual": 0.0,
+      "residual": 2.0816681711721685e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 5",
       "passed": true,
-      "residual": 6.071532165918825e-17,
+      "residual": 1.960237527853792e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 5",
       "passed": true,
-      "residual": 1.9081958235744878e-17,
+      "residual": 1.214306433183765e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: compensated sector drift 6",
       "passed": true,
-      "residual": 1.1102230246251565e-16,
+      "residual": 2.498001805406602e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 6",
       "passed": true,
-      "residual": 2.498001805406602e-16,
+      "residual": 4.3021142204224816e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 6",
       "passed": true,
-      "residual": 6.938893903907228e-17,
+      "residual": 1.6653345369377348e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: compensated sector drift 7",
       "passed": true,
-      "residual": 1.3877787807814457e-17,
+      "residual": 2.7755575615628914e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 7",
       "passed": true,
-      "residual": 0.0,
+      "residual": 4.5102810375396984e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 7",
       "passed": true,
-      "residual": 3.469446951953614e-17,
+      "residual": 6.938893903907228e-18,
       "tolerance": 2e-10
     },
     {
       "name": "B: compensated sector drift 8",
       "passed": true,
-      "residual": 1.1102230246251565e-16,
+      "residual": 1.3183898417423734e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 8",
       "passed": true,
-      "residual": 5.551115123125783e-17,
+      "residual": 1.7520707107365752e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 8",
       "passed": true,
-      "residual": 2.7755575615628914e-17,
+      "residual": 5.377642775528102e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: compensated sector drift 9",
       "passed": true,
-      "residual": 0.0,
+      "residual": 2.7755575615628914e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 9",
       "passed": true,
-      "residual": 1.3877787807814457e-17,
+      "residual": 0.0,
       "tolerance": 2e-10
     },
     {
@@ -270,91 +294,91 @@
     {
       "name": "B: compensated sector drift 10",
       "passed": true,
-      "residual": 1.457167719820518e-16,
+      "residual": 8.326672684688674e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 10",
       "passed": true,
-      "residual": 1.0755285551056204e-16,
+      "residual": 1.249000902703301e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 10",
       "passed": true,
-      "residual": 3.8163916471489756e-17,
+      "residual": 4.163336342344337e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: compensated sector drift 11",
       "passed": true,
-      "residual": 1.3877787807814457e-16,
+      "residual": 5.551115123125783e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 11",
       "passed": true,
-      "residual": 1.491862189340054e-16,
+      "residual": 2.7755575615628914e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 11",
       "passed": true,
-      "residual": 3.469446951953614e-18,
+      "residual": 2.7755575615628914e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: compensated sector drift 12",
       "passed": true,
-      "residual": 1.6653345369377348e-16,
+      "residual": 1.1102230246251565e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 12",
       "passed": true,
-      "residual": 2.8449465006019636e-16,
+      "residual": 1.3183898417423734e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 12",
       "passed": true,
-      "residual": 1.0408340855860843e-16,
+      "residual": 2.7755575615628914e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: compensated sector drift 13",
       "passed": true,
-      "residual": 5.551115123125783e-17,
+      "residual": 2.6020852139652106e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 13",
       "passed": true,
-      "residual": 4.5102810375396984e-17,
+      "residual": 3.415236843329339e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 13",
       "passed": true,
-      "residual": 1.734723475976807e-18,
+      "residual": 2.938187887435717e-17,
       "tolerance": 2e-10
     },
     {
       "name": "B: compensated sector drift 14",
       "passed": true,
-      "residual": 5.551115123125783e-17,
+      "residual": 1.3877787807814457e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: quadratic-variation density 14",
       "passed": true,
-      "residual": 2.0816681711721685e-17,
+      "residual": 1.491862189340054e-16,
       "tolerance": 2e-10
     },
     {
       "name": "B: uncertainty budget generator 14",
       "passed": true,
-      "residual": 3.469446951953614e-17,
+      "residual": 2.0816681711721685e-17,
       "tolerance": 2e-10
     },
     {
@@ -377,18 +401,6 @@
     },
     {
       "name": "B: sharp-sector event invariance",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 1.1102230246251565e-16,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-10
@@ -408,19 +420,7 @@
     {
       "name": "Activity-purity identity",
       "passed": true,
-      "residual": 2.7755575615628914e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 4.163336342344337e-17,
+      "residual": 1.942890293094024e-16,
       "tolerance": 2e-10
     },
     {
@@ -444,7 +444,19 @@
     {
       "name": "Activity-purity identity",
       "passed": true,
-      "residual": 2.7755575615628914e-17,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 5.551115123125782e-17,
       "tolerance": 2e-10
     },
     {
@@ -468,6 +480,18 @@
     {
       "name": "Activity-purity identity",
       "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
       "residual": 1.1102230246251565e-16,
       "tolerance": 2e-10
     },
@@ -480,7 +504,7 @@
     {
       "name": "Activity-purity identity",
       "passed": true,
-      "residual": 0.0,
+      "residual": 1.1102230246251565e-16,
       "tolerance": 2e-10
     },
     {
@@ -492,43 +516,7 @@
     {
       "name": "Activity-purity identity",
       "passed": true,
-      "residual": 1.387778780781446e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 5.551115123125783e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 8.153200337090993e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 8.326672684688674e-17,
+      "residual": 1.3877787807814457e-16,
       "tolerance": 2e-10
     },
     {
@@ -552,7 +540,19 @@
     {
       "name": "Activity-purity identity",
       "passed": true,
-      "residual": 5.551115123125783e-17,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 1.1102230246251565e-16,
       "tolerance": 2e-10
     },
     {
@@ -588,18 +588,6 @@
     {
       "name": "Activity-purity identity",
       "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
       "residual": 1.3877787807814457e-17,
       "tolerance": 2e-10
     },
@@ -612,7 +600,103 @@
     {
       "name": "Activity-purity identity",
       "passed": true,
-      "residual": 6.938893903907228e-17,
+      "residual": 4.85722573273506e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 4.163336342344337e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 2.7755575615628914e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Nonnegative purity contribution",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Activity-purity identity",
+      "passed": true,
+      "residual": 2.7755575615628914e-17,
       "tolerance": 2e-10
     },
     {
@@ -648,19 +732,7 @@
     {
       "name": "Activity-purity identity",
       "passed": true,
-      "residual": 2.7755575615628914e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
       "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 6.938893903907228e-17,
       "tolerance": 2e-10
     },
     {
@@ -684,55 +756,7 @@
     {
       "name": "Activity-purity identity",
       "passed": true,
-      "residual": 5.551115123125783e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 2.7755575615628914e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 2.7755575615628914e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 2.7755575615628914e-17,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Nonnegative purity contribution",
-      "passed": true,
-      "residual": 0.0,
-      "tolerance": 2e-10
-    },
-    {
-      "name": "Activity-purity identity",
-      "passed": true,
-      "residual": 2.7755575615628914e-17,
+      "residual": 1.3877787807814457e-16,
       "tolerance": 2e-10
     },
     {
@@ -754,19 +778,61 @@
       "tolerance": 2e-10
     },
     {
+      "name": "C: variance estimate |V-V~| <= 3 a d",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: update estimate <= 8 a d",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: no-event estimate <= 12 a d",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: no-event norm <= 5 a",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: common-jump estimate <= 11 a d",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: generator trace-norm bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
       "name": "C: frozen approximation bound n=4",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: trace n=4",
+      "name": "C: frozen law normalization n=4",
       "passed": true,
-      "residual": 4.336808689942018e-19,
+      "residual": 0.0,
       "tolerance": 2e-10
     },
     {
-      "name": "C: positivity n=4",
+      "name": "C: frozen law positivity n=4",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: frozen barycenter positivity n=4",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-10
@@ -778,13 +844,19 @@
       "tolerance": 2e-09
     },
     {
-      "name": "C: trace n=8",
+      "name": "C: frozen law normalization n=8",
       "passed": true,
-      "residual": 1.1104347626709818e-16,
+      "residual": 2.220446049250313e-16,
       "tolerance": 2e-10
     },
     {
-      "name": "C: positivity n=8",
+      "name": "C: frozen law positivity n=8",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: frozen barycenter positivity n=8",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-10
@@ -796,13 +868,19 @@
       "tolerance": 2e-09
     },
     {
-      "name": "C: trace n=16",
+      "name": "C: frozen law normalization n=16",
       "passed": true,
-      "residual": 4.440902818748426e-16,
+      "residual": 4.440892098500626e-16,
       "tolerance": 2e-10
     },
     {
-      "name": "C: positivity n=16",
+      "name": "C: frozen law positivity n=16",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: frozen barycenter positivity n=16",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-10
@@ -814,142 +892,316 @@
       "tolerance": 2e-09
     },
     {
-      "name": "C: trace n=32",
+      "name": "C: frozen law normalization n=32",
       "passed": true,
-      "residual": 3.3306697797361844e-16,
+      "residual": 1.1102230246251565e-16,
       "tolerance": 2e-10
     },
     {
-      "name": "C: positivity n=32",
+      "name": "C: frozen law positivity n=32",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-10
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: frozen barycenter positivity n=32",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: first-order mesh convergence",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
     },
     {
-      "name": "C: gate-controlled initial-data bound",
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: initial-data stability in W_1",
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
+    },
+    {
+      "name": "C: barycenter distance bounded by W_1",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: coefficient Lipschitz bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: coefficient Lipschitz bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: coefficient Lipschitz bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: coefficient Lipschitz bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: coefficient Lipschitz bound",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "C: contraction without bilocal coupling",
+      "passed": true,
+      "residual": 0.0,
+      "tolerance": 2e-10
     },
     {
       "name": "C: averaged-product finite spectator n=4",
@@ -974,6 +1226,66 @@
       "passed": true,
       "residual": 0.0,
       "tolerance": 2e-09
+    },
+    {
+      "name": "F: Bell-supported gate formula",
+      "passed": true,
+      "residual": 2.220446049250313e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "F: Bell-supported gate formula",
+      "passed": true,
+      "residual": 1.6653345369377348e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "F: Bell-supported gate formula",
+      "passed": true,
+      "residual": 2.220446049250313e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "F: Bell-supported gate formula",
+      "passed": true,
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "F: Bell-supported gate formula",
+      "passed": true,
+      "residual": 1.6653345369377348e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "F: Bell-supported gate formula",
+      "passed": true,
+      "residual": 1.6653345369377348e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "F: Bell-supported gate formula",
+      "passed": true,
+      "residual": 1.6653345369377348e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "F: Bell-supported gate formula",
+      "passed": true,
+      "residual": 1.3877787807814457e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "F: Bell-supported gate formula",
+      "passed": true,
+      "residual": 2.7755575615628914e-16,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "F: Bell-supported gate formula",
+      "passed": true,
+      "residual": 1.6653345369377348e-16,
+      "tolerance": 2e-10
     },
     {
       "name": "F: parity-weight conservation q=0.0",
@@ -1130,51 +1442,54 @@
     }
   ],
   "diagnostics": {
-    "activity_purity_max_residual": 1.3877787807814457e-16,
+    "activity_purity_max_residual": 1.942890293094024e-16,
     "flow": {
-      "M_star": 2.38,
-      "kappa_star": 0.75,
+      "M_star": 7.3500000000000005,
+      "L_star": 30.450000000000003,
+      "kappa_star": 6.125,
+      "coupling_exposure": 0.1,
       "frozen": [
         {
           "steps": 4,
-          "error": 0.00016357301997828514,
-          "upper_bound": 0.19566427449294116
+          "W1_error": 1.951814647359329e-05,
+          "upper_bound": 1.1620656659539201
         },
         {
           "steps": 8,
-          "error": 8.1149384437364e-05,
-          "upper_bound": 0.09783213724647058
+          "W1_error": 9.74459769319258e-06,
+          "upper_bound": 0.5810328329769601
         },
         {
           "steps": 16,
-          "error": 4.04158433759077e-05,
-          "upper_bound": 0.04891606862323529
+          "W1_error": 4.868686807185663e-06,
+          "upper_bound": 0.29051641648848003
         },
         {
           "steps": 32,
-          "error": 2.016826421558e-05,
-          "upper_bound": 0.024458034311617645
+          "W1_error": 2.433441248200774e-06,
+          "upper_bound": 0.14525820824424002
         }
       ],
+      "stability_W1_max": 0.56,
       "averaged_products": [
         {
           "steps": 4,
-          "spectator_test_error": 5.980356496206367e-05,
+          "spectator_test_error": 6.023065995987052e-05,
           "epsilon": 0.029133000000000006
         },
         {
           "steps": 8,
-          "spectator_test_error": 8.695673900823263e-06,
+          "spectator_test_error": 8.74962217572189e-06,
           "epsilon": 0.008465999999999987
         },
         {
           "steps": 16,
-          "spectator_test_error": 3.4545047753100418e-06,
+          "spectator_test_error": 3.477571334063612e-06,
           "epsilon": 0.00673200000000001
         },
         {
           "steps": 32,
-          "spectator_test_error": 8.371528438248506e-07,
+          "spectator_test_error": 8.429423589648098e-07,
           "epsilon": 0.0032640000000000342
         }
       ]
